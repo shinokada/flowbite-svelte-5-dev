@@ -19,11 +19,11 @@
 		},
 		avatar: {
 			checked: false,
-			problems: 'Dropdown not working'
+			problems: 'Dropdown example not working'
 		},
 		badge: {
 			checked: false,
-			problems: 'Dismissable transition not working'
+			problems: 'Dismissable transition example not working'
 		},
 		banner: {
 			checked: true
@@ -57,7 +57,7 @@
 		},
 		dropdown: {
 			checked: false,
-			problems: 'Dropdown not working'
+			problems: 'All Dropdown not working'
 		},
 		footer: {
 			checked: false
@@ -138,19 +138,22 @@
 
 	const forms: ListType = {
 		checkbox: {
-			checked: false
+			checked: true,
+			problems: 'All Checkbox not working. After the first click not working'
 		},
 		fileInput: {
-			checked: false
+			checked: true
 		},
 		floatingLabel: {
-			checked: false
+			checked: true
 		},
 		inputField: {
-			checked: false
+			checked: true,
+			problems: 'Input Field dropdown example not working.'
 		},
 		radio: {
-			checked: false
+			checked: true,
+			problems: 'Radio in dropdown example not working.'
 		},
 		range: {
 			checked: false
