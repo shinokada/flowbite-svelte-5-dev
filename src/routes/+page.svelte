@@ -1,71 +1,200 @@
-<script>
+<script lang="ts">
 	import { List, Li, Heading } from 'flowbite-svelte';
-	import { CheckCircleSolid, CloseCircleSolid } from 'flowbite-svelte-icons';
-	const components = {
-		accordion: true,
-		alert: true,
-		avatar: false,
-		badge: false,
-		banner: true,
-		bottomNavigation: true,
-		breadcrumb: true,
-		buttonGroup: true,
-		buttons: false,
-		cards: false,
-		carousel: false,
-		darkmode: false,
-		deviceMockups: false,
-		drawer: false,
-		dropdown: false,
-		footer: false,
-		forms: false,
-		gallery: false,
-		indicators: false,
-		kbd: false,
-		listGroup: false,
-		megaMenu: false,
-		modal: false,
-		navbar: false,
-		pagination: false,
-		popover: false,
-		progress: false,
-		rating: false,
-		sidebar: false,
-		skeleton: false,
-		spinner: false,
-		sppedDial: false,
-		table: false,
-		tabs: false,
-		testdir: false,
-		timeline: false,
-		toast: false,
-		tooltip: false,
-		typography: false,
-		video: false
+	import { CheckCircleSolid, CloseCircleSolid, QuestionCircleSolid } from 'flowbite-svelte-icons';
+	interface Component {
+		checked: boolean;
+		problems?: string;
+	}
+
+	interface ListType {
+		[key: string]: Component;
+	}
+	const components: ListType = {
+		accordion: {
+			checked: true,
+		  
+		},
+		alert: {
+			checked: true
+		},
+		avatar: {
+			checked: false,
+			problems: 'Dropdown not working'
+		},
+		badge: {
+			checked: false,
+			problems: 'Dismissable transition not working'
+		},
+		banner: {
+			checked: true
+		},
+		bottomNavigation: {
+			checked: true
+		},
+		breadcrumb: {
+			checked: true
+		},
+		buttonGroup: {
+			checked: true
+		},
+		buttons: {
+			checked: false
+		},
+		cards: {
+			checked: false
+		},
+		carousel: {
+			checked: false
+		},
+		darkmode: {
+			checked: false
+		},
+		deviceMockups: {
+			checked: false
+		},
+		drawer: {
+			checked: false
+		},
+		dropdown: {
+			checked: false,
+			problems: 'Dropdown not working'
+		},
+		footer: {
+			checked: false
+		},
+		forms: {
+			checked: false
+		},
+		gallery: {
+			checked: false
+		},
+		indicators: {
+			checked: false
+		},
+		kbd: {
+			checked: false
+		},
+		listGroup: {
+			checked: false
+		},
+		megaMenu: {
+			checked: false
+		},
+		modal: {
+			checked: false
+		},
+		navbar: {
+			checked: false
+		},
+		pagination: {
+			checked: false
+		},
+		popover: {
+			checked: false
+		},
+		progress: {
+			checked: false
+		},
+		rating: {
+			checked: false
+		},
+		sidebar: {
+			checked: false
+		},
+		skeleton: {
+			checked: false
+		},
+		spinner: {
+			checked: false
+		},
+		sppedDial: {
+			checked: false
+		},
+		table: {
+			checked: false
+		},
+		tabs: {
+			checked: false
+		},
+		testdir: {
+			checked: false
+		},
+		timeline: {
+			checked: false
+		},
+		toast: {
+			checked: false
+		},
+		tooltip: {
+			checked: false
+		},
+		typography: {
+			checked: false
+		},
+		video: {
+			checked: false
+		}
 	};
 
-	const forms = {
-		checkbox: false,
-		fileInput: false,
-		floatingLabel: false,
-		inputField: false,
-		radio: false,
-		range: false,
-		searchInput: false,
-		select: false,
-		textarea: false,
-		toggle: false
+	const forms: ListType = {
+		checkbox: {
+			checked: false
+		},
+		fileInput: {
+			checked: false
+		},
+		floatingLabel: {
+			checked: false
+		},
+		inputField: {
+			checked: false
+		},
+		radio: {
+			checked: false
+		},
+		range: {
+			checked: false
+		},
+		searchInput: {
+			checked: false
+		},
+		select: {
+			checked: false
+		},
+		textarea: {
+			checked: false
+		},
+		toggle: {
+			checked: false
+		}
 	};
 
-	const typography = {
-		blockquote: true,
-		heading: true,
-		hr: true,
-		image: true,
-		link: false,
-		list: false,
-		paragraph: false,
-		text: false
+	const typography: ListType = {
+		blockquote: {
+			checked: true
+		},
+		heading: {
+			checked: true
+		},
+		hr: {
+			checked: true
+		},
+		image: {
+			checked: true
+		},
+		link: {
+			checked: true
+		},
+		list: {
+			checked: true
+		},
+		paragraph: {
+			checked: true,
+			problems: 'Columns not working'
+		},
+		text: {
+			checked: true
+		}
 	};
 </script>
 
@@ -77,14 +206,16 @@
 	class="mb-2 text-lg font-semibold text-gray-900 dark:text-white">Components</Heading
 >
 <List tag="ul" class="space-y-1 text-gray-500 dark:text-gray-400" list="none">
-	{#each Object.entries(components) as [key, value]}
+	{#each Object.entries(components) as [key, { checked, problems }]}
 		<Li icon>
-			{#if value}
-				<CheckCircleSolid class="me-2 h-5 w-5 text-green-500 dark:text-green-400" />
+			{#if checked && !problems}
+				<CheckCircleSolid class="me-2 h-8 w-8 text-green-500 dark:text-green-400" />
+			{:else if problems}
+				<CloseCircleSolid class="me-2 h-8 w-8 text-red-500 dark:text-red-400" />
 			{:else}
-				<CloseCircleSolid class="me-2 h-5 w-5 text-gray-500 dark:text-gray-400" />
+				<QuestionCircleSolid class="me-2 h-8 w-8 text-gray-500 dark:text-gray-400" />
 			{/if}
-			<a href="/components/{key}">{key}</a>
+			<a href="/components/{key}" class='hover:underline'>{key}</a> {#if problems} <span class="text-red-500 ml-4">({problems})</span> {/if}
 		</Li>
 	{/each}
 </List>
@@ -95,14 +226,16 @@
 	class="mb-2 text-lg font-semibold text-gray-900 dark:text-white">Forms</Heading
 >
 <List tag="ul" class="space-y-1 text-gray-500 dark:text-gray-400" list="none">
-	{#each Object.entries(forms) as [key, value]}
+	{#each Object.entries(forms) as [key, { checked, problems }]}
 		<Li icon>
-			{#if value}
-				<CheckCircleSolid class="me-2 h-5 w-5 text-green-500 dark:text-green-400" />
+			{#if checked && !problems}
+				<CheckCircleSolid class="me-2 h-8 w-8 text-green-500 dark:text-green-400" />
+			{:else if problems}
+				<CloseCircleSolid class="me-2 h-8 w-8 text-red-500 dark:text-red-400" />
 			{:else}
-				<CloseCircleSolid class="me-2 h-5 w-5 text-gray-500 dark:text-gray-400" />
+				<QuestionCircleSolid class="me-2 h-8 w-8 text-gray-500 dark:text-gray-400" />
 			{/if}
-			<a href="/forms/{key}">{key}</a>
+			<a href="/forms/{key}" class='hover:underline'>{key}</a> {#if problems} <span class="text-red-500 ml-4">({problems})</span> {/if}
 		</Li>
 	{/each}
 </List>
@@ -113,14 +246,16 @@
 	class="mb-2 text-lg font-semibold text-gray-900 dark:text-white">Typography</Heading
 >
 <List tag="ul" class="space-y-1 text-gray-500 dark:text-gray-400" list="none">
-	{#each Object.entries(typography) as [key, value]}
+	{#each Object.entries(typography) as [key, { checked, problems }]}
 		<Li icon>
-			{#if value}
-				<CheckCircleSolid class="me-2 h-5 w-5 text-green-500 dark:text-green-400" />
+			{#if checked && !problems}
+				<CheckCircleSolid class="me-2 h-8 w-8 text-green-500 dark:text-green-400" />
+			{:else if problems}
+				<CloseCircleSolid class="me-2 h-8 w-8 text-red-500 dark:text-red-400" />
 			{:else}
-				<CloseCircleSolid class="me-2 h-5 w-5 text-gray-500 dark:text-gray-400" />
+				<QuestionCircleSolid class="me-2 h-8 w-8 text-gray-500 dark:text-gray-400" />
 			{/if}
-			<a href="/typography/{key}">{key}</a>
+			<a href="/typography/{key}" class='hover:underline'>{key}</a> {#if problems} <span class="text-red-500 ml-4">({problems})</span> {/if}
 		</Li>
 	{/each}
 </List>
