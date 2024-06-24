@@ -54,7 +54,7 @@
 			checked: true
 		},
 		drawer: {
-			checked: false
+			checked: true
 		},
 		dropdown: {
 			checked: false,
@@ -102,7 +102,7 @@
 			checked: true
 		},
 		sidebar: {
-			checked: false
+			checked: true
 		},
 		skeleton: {
 			checked: true
