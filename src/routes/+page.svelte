@@ -199,9 +199,70 @@
 			checked: true
 		}
 	};
+
+	function analyzeComponents(components: ListType) {
+		let total = 0;
+		let checked = 0;
+		let unchecked = 0;
+		let withProblems = 0;
+		let withoutProblems = 0;
+
+		for (const component in components) {
+			total++;
+			checked += components[component].checked ? 1 : 0;
+			unchecked += !components[component].checked ? 1 : 0;
+			withProblems += components[component].problems ? 1 : 0;
+		}
+		withoutProblems = checked - withProblems; 
+
+		return {
+			total,
+			checked,
+			unchecked,
+			withProblems,
+			withoutProblems
+		};
+	}
+
+	const componentsAnalysis = analyzeComponents(components);
+	const formsAnalysis = analyzeComponents(forms);
+	const typographyAnalysis = analyzeComponents(typography);
+
+	// console.log("Components:", componentsAnalysis);
+	// console.log("Forms:", formsAnalysis);
+	// console.log("Typography:", typographyAnalysis);
+
 </script>
 
 <h1>Flowbite Svelte Check for Svelte 5 (No Runes)</h1>
+
+<h2>Components</h2>
+<List tag="ul" class="space-y-1 text-gray-500 dark:text-gray-400" list="none">
+	<Li># of components - {componentsAnalysis.total}</Li>
+	<Li># of checked - {componentsAnalysis.checked}</Li>
+	<Li># of unchecked - {componentsAnalysis.unchecked}</Li>
+	<Li liClass='text-green-500'># of without problems - {componentsAnalysis.withoutProblems}</Li>
+	<Li liClass='text-red-500'># of with problems - {componentsAnalysis.withProblems}</Li>
+</List>
+	
+
+<h2>Forms</h2>
+<List tag="ul" class="space-y-1 text-gray-500 dark:text-gray-400" list="none">
+	<Li># of components - {formsAnalysis.total}</Li>
+	<Li># of checked - {formsAnalysis.checked}</Li>
+	<Li># of unchecked - {formsAnalysis.unchecked}</Li>
+	<Li liClass='text-green-500'># of without problems - {formsAnalysis.withoutProblems}</Li>
+	<Li liClass='text-red-500'># of with problems - {formsAnalysis.withProblems}</Li>
+</List>
+
+<h2>Typography</h2>
+<List tag="ul" class="space-y-1 text-gray-500 dark:text-gray-400" list="none">
+	<Li># of components - {typographyAnalysis.total}</Li>
+	<Li># of checked - {typographyAnalysis.checked}</Li>
+	<Li># of unchecked - {typographyAnalysis.unchecked}</Li>
+	<Li liClass='text-green-500'># of without problems - {typographyAnalysis.withoutProblems}</Li>
+	<Li liClass='text-red-500'># of with problems - {typographyAnalysis.withProblems}</Li>
+</List>
 
 <Heading
 	tag="h2"
