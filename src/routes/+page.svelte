@@ -108,10 +108,11 @@
 			checked: true
 		},
 		speedDial: {
-			checked: false
+			checked: true
 		},
 		table: {
-			checked: false
+			checked: true,
+			problems: 'Checkbox example not working, Click and double-click on row transition and double-click on row not working'
 		},
 		tabs: {
 			checked: false
