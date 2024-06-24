@@ -60,7 +60,7 @@
 			problems: 'All Dropdown not working'
 		},
 		footer: {
-			checked: false
+			checked: true
 		},
 		forms: {
 			checked: false
@@ -72,7 +72,7 @@
 			checked: false
 		},
 		kbd: {
-			checked: false
+			checked: true
 		},
 		listGroup: {
 			checked: false
@@ -93,7 +93,7 @@
 			checked: false
 		},
 		progress: {
-			checked: false
+			checked: true
 		},
 		rating: {
 			checked: false
@@ -102,12 +102,12 @@
 			checked: false
 		},
 		skeleton: {
-			checked: false
+			checked: true
 		},
 		spinner: {
-			checked: false
+			checked: true
 		},
-		sppedDial: {
+		speedDial: {
 			checked: false
 		},
 		table: {
@@ -123,16 +123,18 @@
 			checked: false
 		},
 		toast: {
-			checked: false
+			checked: true,
+			problems: 'All transition not working'
 		},
 		tooltip: {
-			checked: false
+			checked: true,
+			problems: 'Color dark changes to light, etc.'
 		},
 		typography: {
-			checked: false
+			checked: true
 		},
 		video: {
-			checked: false
+			checked: true
 		}
 	};
 
@@ -156,19 +158,20 @@
 			problems: 'Radio in dropdown example not working.'
 		},
 		range: {
-			checked: false
+			checked: true
 		},
 		searchInput: {
-			checked: false
+			checked: true,
+			problems: 'Search with dropdown example not working. Location search example not working.'
 		},
 		select: {
-			checked: false
+			checked: true,
 		},
 		textarea: {
-			checked: false
+			checked: true
 		},
 		toggle: {
-			checked: false
+			checked: true
 		}
 	};
 
