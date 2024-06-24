@@ -38,7 +38,7 @@
 			checked: true
 		},
 		buttons: {
-			checked: false
+			checked: true
 		},
 		cards: {
 			checked: false
@@ -47,7 +47,7 @@
 			checked: false
 		},
 		darkmode: {
-			checked: false
+			checked: true
 		},
 		deviceMockups: {
 			checked: true
@@ -87,7 +87,7 @@
 			checked: false
 		},
 		pagination: {
-			checked: false
+			checked: true
 		},
 		popover: {
 			checked: false
@@ -96,7 +96,7 @@
 			checked: true
 		},
 		rating: {
-			checked: false
+			checked: true
 		},
 		sidebar: {
 			checked: false
