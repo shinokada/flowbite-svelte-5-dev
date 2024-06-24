@@ -50,7 +50,7 @@
 			checked: false
 		},
 		deviceMockups: {
-			checked: false
+			checked: true
 		},
 		drawer: {
 			checked: false
@@ -66,16 +66,16 @@
 			checked: false
 		},
 		gallery: {
-			checked: false
+			checked: true
 		},
 		indicators: {
-			checked: false
+			checked: true
 		},
 		kbd: {
 			checked: true
 		},
 		listGroup: {
-			checked: false
+			checked: true
 		},
 		megaMenu: {
 			checked: false
@@ -116,11 +116,8 @@
 		tabs: {
 			checked: false
 		},
-		testdir: {
-			checked: false
-		},
 		timeline: {
-			checked: false
+			checked: true
 		},
 		toast: {
 			checked: true,
