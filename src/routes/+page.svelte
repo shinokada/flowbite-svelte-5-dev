@@ -44,7 +44,8 @@
 			checked: false
 		},
 		carousel: {
-			checked: false
+			checked: true,
+			problems: 'Advanced customization arrows not working'
 		},
 		darkmode: {
 			checked: true
@@ -63,7 +64,8 @@
 			checked: true
 		},
 		forms: {
-			checked: false
+			checked: true,
+			problems: 'Checkbox example not working.'
 		},
 		gallery: {
 			checked: true
@@ -84,7 +86,8 @@
 			checked: false
 		},
 		navbar: {
-			checked: false
+			checked: true,
+			problems: 'Navbar with dropdown example not working, User menu dropdown comes on hover. Small size menu transition jerks twice.'
 		},
 		pagination: {
 			checked: true
