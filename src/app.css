@@ -25,13 +25,13 @@
     -moz-tab-size: 4;
     tab-size: 4;
   }
-  h1 {
+  main>h1 {
     @apply text-3xl font-bold my-6
   }
   main>h2 {
     @apply text-2xl font-bold my-4
   }
-  h3 {
+  main>h3 {
     @apply text-xl font-bold my-2
   }
 }

@@ -18,11 +18,11 @@
 			checked: true
 		},
 		avatar: {
-			checked: false,
+			checked: true,
 			problems: 'Dropdown example not working'
 		},
 		badge: {
-			checked: false,
+			checked: true,
 			problems: 'Dismissable transition example not working'
 		},
 		banner: {
@@ -41,7 +41,8 @@
 			checked: true
 		},
 		cards: {
-			checked: false
+			checked: true,
+			problems: 'User profile card dropdown react to hover and a wrong direction.'
 		},
 		carousel: {
 			checked: true,
@@ -58,7 +59,7 @@
 		},
 		dropdown: {
 			checked: false,
-			problems: 'All Dropdown not working'
+			// problems: 'All Dropdown not working'
 		},
 		footer: {
 			checked: true
@@ -93,7 +94,8 @@
 			checked: true
 		},
 		popover: {
-			checked: false
+			checked: true,
+			problems: 'Animation, Placement, External reference examples not working: removed for now'
 		},
 		progress: {
 			checked: true
@@ -118,7 +120,7 @@
 			problems: 'Checkbox example not working, Click and double-click on row transition and double-click on row not working'
 		},
 		tabs: {
-			checked: false
+			checked: true
 		},
 		timeline: {
 			checked: true
