@@ -19,11 +19,11 @@
 		},
 		avatar: {
 			checked: true,
-			problems: 'Dropdown example not working'
+			problems: 'Dropdown example'
 		},
 		badge: {
 			checked: true,
-			problems: 'Dismissable transition example not working'
+			problems: 'Dismissable transition example'
 		},
 		banner: {
 			checked: true
@@ -46,7 +46,7 @@
 		},
 		carousel: {
 			checked: true,
-			problems: 'Advanced customization arrows not working'
+			problems: 'Advanced customization arrows'
 		},
 		darkmode: {
 			checked: true
@@ -58,15 +58,15 @@
 			checked: true
 		},
 		dropdown: {
-			checked: false,
-			// problems: 'All Dropdown not working'
+			checked: true,
+			problems: 'One or more examples crushes the server.Wrong direction, opens with hover, Adding links and active class, Menu example, other examples'
 		},
 		footer: {
 			checked: true
 		},
 		forms: {
 			checked: true,
-			problems: 'Checkbox example not working.'
+			problems: 'Checkbox example.'
 		},
 		gallery: {
 			checked: true
@@ -81,21 +81,23 @@
 			checked: true
 		},
 		megaMenu: {
-			checked: false
+			checked: true,
+			problems: 'Menu opens upward when it is the bottom of the page.'
 		},
 		modal: {
-			checked: false
+			checked: true,
+			problems: 'Placement, Colors example'
 		},
 		navbar: {
 			checked: true,
-			problems: 'Navbar with dropdown example not working, User menu dropdown comes on hover. Small size menu transition jerks twice.'
+			problems: 'Navbar with dropdown example, User menu dropdown comes on hover. Small size menu transition jerks twice.'
 		},
 		pagination: {
 			checked: true
 		},
 		popover: {
 			checked: true,
-			problems: 'Animation, Placement, External reference examples not working: removed for now'
+			problems: 'Animation, Placement, External reference examples: removed for now'
 		},
 		progress: {
 			checked: true
@@ -117,7 +119,7 @@
 		},
 		table: {
 			checked: true,
-			problems: 'Checkbox example not working, Click and double-click on row transition and double-click on row not working'
+			problems: 'Checkbox example, Click and double-click on row transition and double-click on row'
 		},
 		tabs: {
 			checked: true
@@ -127,7 +129,7 @@
 		},
 		toast: {
 			checked: true,
-			problems: 'All transition not working'
+			problems: 'All transition'
 		},
 		tooltip: {
 			checked: true,
@@ -144,7 +146,7 @@
 	const forms: ListType = {
 		checkbox: {
 			checked: true,
-			problems: 'All Checkbox not working. After the first click not working'
+			problems: 'All Checkbox. After the first click'
 		},
 		fileInput: {
 			checked: true
@@ -154,18 +156,18 @@
 		},
 		inputField: {
 			checked: true,
-			problems: 'Input Field dropdown example not working.'
+			problems: 'Input Field dropdown example.'
 		},
 		radio: {
 			checked: true,
-			problems: 'Radio in dropdown example not working.'
+			problems: 'Radio in dropdown example.'
 		},
 		range: {
 			checked: true
 		},
 		searchInput: {
 			checked: true,
-			problems: 'Search with dropdown example not working. Location search example not working.'
+			problems: 'Search with dropdown example. Location search example.'
 		},
 		select: {
 			checked: true,
@@ -199,7 +201,7 @@
 		},
 		paragraph: {
 			checked: true,
-			problems: 'Columns not working'
+			problems: 'Columns'
 		},
 		text: {
 			checked: true
