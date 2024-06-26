@@ -7,9 +7,10 @@
   let group = [2, 3];
 </script>
 
+<h1>Checkbox</h1>
 The checkbox component can be used to receive one or more selected options from the user in the form of a square box available in multiple styles, sizes, colors, and variants.
 
-## Checkbox examples
+<h2>Checkbox examples</h2>
 
 Use this default example of a checbkox element in a checked, unchecked and indeterminate state.
 
@@ -19,7 +20,7 @@ Use this default example of a checbkox element in a checked, unchecked and indet
 <Checkbox indeterminate>Indeterminate state</Checkbox>
 </div>
 
-## Disabled state
+<h2>Disabled state</h2>
 
 This example can be used for the disabled state of the checkbox component by applying the disabled attribute to the input element.
 
@@ -29,7 +30,7 @@ This example can be used for the disabled state of the checkbox component by app
 <Checkbox disabled indeterminate>Disabled indeterminate</Checkbox>
 </div>
 
-## Alternative syntax
+<h2>Alternative syntax</h2>
 
 If you need separate control over the label and the checkbox you can use the verbose syntax, but then you need to take care about aligning manually.
 
@@ -42,7 +43,7 @@ NOT WORKING
 </Label>
 </div>
 
-## Checkbox with a link
+<h2>Checkbox with a link</h2>
 
 Use this example if you want to add an anchor link inside the label of the checkbox component.
 
@@ -54,7 +55,7 @@ Use this example if you want to add an anchor link inside the label of the check
 </Checkbox>
 </div>
 
-## Helper text
+<h2>Helper text</h2>
 
 Get started with this example if you want to add a secondary helper text for the checkbox component.
 
@@ -63,7 +64,7 @@ Get started with this example if you want to add a secondary helper text for the
 <Helper id="helper-checkbox-text" class="ps-6">For orders shipped from $25 in books or $29 in other categories</Helper>
 </div>
 
-## Bordered
+<h2>Bordered</h2>
 
 Use this example of a checkbox inside a card element to enable a larger area of clicking activation.
 
@@ -76,7 +77,7 @@ Use this example of a checkbox inside a card element to enable a larger area of 
 </div>
 </div>
 
-## Checkbox list group
+<h2>Checkbox list group</h2>
 
 Use this example to show a list of checkbox items grouped inside a card.
 
@@ -90,7 +91,7 @@ Use this example to show a list of checkbox items grouped inside a card.
 </ul>
 </div>
 
-## Horizontal list group
+<h2>Horizontal list group</h2>
 
 Use this example to show a list of checkbox items inside a card horizontally.
 
@@ -104,7 +105,7 @@ Use this example to show a list of checkbox items inside a card horizontally.
 </ul>
 </div>
 
-## Checkbox dropdown
+<h2>Checkbox dropdown</h2>
 
 Use this example to show a list of checkbox items inside a dropdown menu.
 
@@ -138,7 +139,7 @@ Use this example to show a list of checkbox items inside a dropdown menu.
 </Dropdown>
 </div>
 
-## Inline layout
+<h2>Inline layout</h2>
 
 You can align the checkbox elements horizontally by using a wrapper tag and applying the flex class.
 
@@ -160,7 +161,7 @@ You can use the property `inline` as the alternative.
 <Checkbox inline class="me-2" disabled>Inline disabled</Checkbox>
 </div>
 
-## Colors
+<h2>Colors</h2>
 
 <div class='mt-8 border w-full mx-auto bg-gradient-to-r bg-white dark:bg-gray-900 p-6'>
 <div class="flex gap-4">
@@ -177,7 +178,7 @@ You can use the property `inline` as the alternative.
 </div>
 </div>
 
-## CheckboxButton
+<h2>CheckboxButton</h2>
 
 The special case component - `CheckboxButton` - is the `Checkbox` with the [Button](/docs/components/buttons) look and feel. I can be used as standalone element or be wrapped inside [ButtonGroup](/docs/components/button-group).
 
@@ -199,7 +200,7 @@ This component accepts all props from the [Button](/docs/components/buttons) for
   </ButtonGroup>
 </div>
 
-## Advanced layout
+<h2>Advanced layout</h2>
 
 Use this example of an advanced layout of checkbox elements where the label parent element can be styled when the checkbox is checked.
 
@@ -230,7 +231,7 @@ Use this example of an advanced layout of checkbox elements where the label pare
 </div>
 </div>
 
-## Group variable
+<h2>Group variable</h2>
 
 <div class='mt-8 border w-full mx-auto bg-gradient-to-r bg-white dark:bg-gray-900 p-6'>
 <div class="flex gap-2">

@@ -23,7 +23,6 @@
 		},
 		badge: {
 			checked: true,
-			problems: 'Dismissable transition example'
 		},
 		banner: {
 			checked: true
@@ -201,7 +200,6 @@
 		},
 		paragraph: {
 			checked: true,
-			problems: 'Columns'
 		},
 		text: {
 			checked: true
