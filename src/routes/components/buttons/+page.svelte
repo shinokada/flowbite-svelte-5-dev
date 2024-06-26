@@ -220,5 +220,5 @@ You can use on:click or any standard on: to listen to the event.
 
 <div class='mt-8 border w-full mx-auto bg-gradient-to-r bg-white dark:bg-gray-900 p-6 flex flex-wrap gap-2'>
 <Button on:click={btn1}>Button 1</Button>
-<Button on:click={btn2}>Button 2</Button>
+<Button on:touchstart={btn2}>Button 2</Button>
 </div>
