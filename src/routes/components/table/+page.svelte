@@ -1,4 +1,4 @@
-<script>
+<script lang="ts">
   import { Table, TableBody, TableBodyCell, TableBodyRow, TableHead, TableHeadCell, Checkbox, TableSearch, ImagePlaceholder, Modal } from 'flowbite-svelte';
   import { writable } from 'svelte/store';
   import { slide } from 'svelte/transition';
@@ -42,10 +42,13 @@
     });
     sortItems.set(sorted);
   }
-
-
-
-  const items2 = [
+  interface ItemType {
+    name?: string;
+    color?: string;
+    type?: string;
+    price?: string;
+  }
+  const items2: ItemType[] = [
     {
       name: 'Apple MacBook Pro 17"',
       color: "Sliver",
@@ -66,10 +69,11 @@
     },
   ];
 
-  let openRow
-  let details
+  let openRow: number | null = null;
+  let details: ItemType | null = null;
+  let doubleClickModal: boolean = false;
 
-  const toggleRow = (i) => {
+  const toggleRow = (i: number) => {
     openRow = openRow === i ? null : i
   }
 </script>
@@ -791,7 +795,11 @@ An example to use on:click (main row) and on:dblclick (expanded row)
         <TableBodyCell>{item.price}</TableBodyCell>
       </TableBodyRow>
       {#if openRow === i}
-        <TableBodyRow on:dblclick={() => (details = item)}>
+        <TableBodyRow on:dblclick={
+        () => {
+          doubleClickModal = true;
+          details = item;
+        }}>
           <TableBodyCell colspan="4" class="p-0">
             <div class="px-2 py-3" transition:slide={{ duration: 300, axis: 'y' }}>
               <ImagePlaceholder />
@@ -802,7 +810,7 @@ An example to use on:click (main row) and on:dblclick (expanded row)
     {/each}
   </TableBody>
 </Table>
-<Modal title={details?.name} open={!!details} autoclose outsideclose>
+<Modal title={details?.name} bind:open={doubleClickModal} autoclose outsideclose>
   <ImagePlaceholder />
 </Modal>
 </div>

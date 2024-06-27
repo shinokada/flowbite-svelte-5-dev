@@ -65,7 +65,6 @@
 		},
 		forms: {
 			checked: true,
-			problems: 'Checkbox example.'
 		},
 		gallery: {
 			checked: true
@@ -118,7 +117,6 @@
 		},
 		table: {
 			checked: true,
-			problems: 'Checkbox example, Click and double-click on row transition and double-click on row'
 		},
 		tabs: {
 			checked: true
@@ -128,7 +126,6 @@
 		},
 		toast: {
 			checked: true,
-			problems: 'All transition'
 		},
 		tooltip: {
 			checked: true,
@@ -145,7 +142,6 @@
 	const forms: ListType = {
 		checkbox: {
 			checked: true,
-			problems: 'All Checkbox. After the first click'
 		},
 		fileInput: {
 			checked: true

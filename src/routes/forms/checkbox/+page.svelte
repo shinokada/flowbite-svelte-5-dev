@@ -1,10 +1,20 @@
-<script>
+<script lang="ts">
   import { Checkbox, Table, TableHead, TableHeadCell, TableBody, TableBodyCell, Label, TableBodyRow, Helper, Dropdown, DropdownItem, Button, Search, CheckboxButton, ButtonGroup  } from 'flowbite-svelte';
   import { ChevronDownOutline, UserRemoveSolid, AppleSolid, FacebookSolid, DiscordSolid, DropboxSolid } from 'flowbite-svelte-icons';
   import React from '../../utils/icons/React.svelte';
   import Vue from '../../utils/icons/Vue.svelte';
   import Angular from '../../utils/icons/Angular.svelte';
-  let group = [2, 3];
+  type CheckboxItem = {
+    value: string;
+    label: string; 
+    isChecked?: boolean; 
+  };
+  let choices = [
+    { value: '1', label: 'One'},
+    { value: '2', label: 'Two'},
+    { value: '3', label: 'Three' }
+  ]
+  let group = ['2', '3'];
 </script>
 
 <h1>Checkbox</h1>
@@ -111,7 +121,7 @@ Use this example to show a list of checkbox items inside a dropdown menu.
 
 <div class='mt-8 border w-full mx-auto bg-gradient-to-r bg-white dark:bg-gray-900 p-6 flex justify-center items-start h-96'>
 <Button>Project users<ChevronDownOutline class="w-6 h-6 ms-2 text-white dark:text-white" /></Button>
-<Dropdown class="overflow-y-auto px-3 pb-3 text-sm h-44">
+<Dropdown containerClass="overflow-y-auto px-3 pb-3 text-sm h-44">
   <div slot="header" class="p-3">
     <Search size="md" />
   </div>
@@ -234,11 +244,9 @@ Use this example of an advanced layout of checkbox elements where the label pare
 <h2>Group variable</h2>
 
 <div class='mt-8 border w-full mx-auto bg-gradient-to-r bg-white dark:bg-gray-900 p-6'>
-<div class="flex gap-2">
-  <Checkbox bind:group value={1}>One</Checkbox>
-  <Checkbox bind:group value={2}>Two</Checkbox>
-  <Checkbox bind:group value={3}>Three</Checkbox>
-</div>
-<div class="my-2 border border-gray-200 dark:border-gray-700 rounded-lg p-2 w-44 dark:text-gray-400">Group: {group}</div>
-<Button on:click={() => (group.length = 0)}>Clear</Button>
+  <div class="flex gap-2">
+    <Checkbox name="flavours" {choices} bind:group groupInputClass='ms-2'/>
+  </div>
+  <div class="my-2 border border-gray-200 dark:border-gray-700 rounded-lg p-2 w-44 dark:text-gray-400">Group: {group}</div>
+  <Button on:click={() => (group.length = 0)}>Clear</Button>
 </div>
