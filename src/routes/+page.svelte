@@ -241,8 +241,8 @@
 <h2>Components</h2>
 <List tag="ul" class="space-y-1 text-gray-500 dark:text-gray-400" list="none">
 	<Li># of pages - {componentsAnalysis.total}</Li>
-	<Li># of checked - {componentsAnalysis.checked}</Li>
-	<Li># of unchecked - {componentsAnalysis.unchecked}</Li>
+	<Li># of pages checked - {componentsAnalysis.checked}</Li>
+	<Li># of pages unchecked - {componentsAnalysis.unchecked}</Li>
 	<Li liClass='text-green-500'># of pages without problems - {componentsAnalysis.withoutProblems}</Li>
 	<Li liClass='text-red-500'># of pages with problems - {componentsAnalysis.withProblems}</Li>
 </List>
@@ -251,8 +251,8 @@
 <h2>Forms</h2>
 <List tag="ul" class="space-y-1 text-gray-500 dark:text-gray-400" list="none">
 	<Li># of pages - {formsAnalysis.total}</Li>
-	<Li># of checked - {formsAnalysis.checked}</Li>
-	<Li># of unchecked - {formsAnalysis.unchecked}</Li>
+	<Li># of pages checked - {formsAnalysis.checked}</Li>
+	<Li># of pages unchecked - {formsAnalysis.unchecked}</Li>
 	<Li liClass='text-green-500'># of pages without problems - {formsAnalysis.withoutProblems}</Li>
 	<Li liClass='text-red-500'># of pages with problems - {formsAnalysis.withProblems}</Li>
 </List>
@@ -260,8 +260,8 @@
 <h2>Typography</h2>
 <List tag="ul" class="space-y-1 text-gray-500 dark:text-gray-400" list="none">
 	<Li># of pages - {typographyAnalysis.total}</Li>
-	<Li># of checked - {typographyAnalysis.checked}</Li>
-	<Li># of unchecked - {typographyAnalysis.unchecked}</Li>
+	<Li># of pages checked - {typographyAnalysis.checked}</Li>
+	<Li># of pages unchecked - {typographyAnalysis.unchecked}</Li>
 	<Li liClass='text-green-500'># of pages without problems - {typographyAnalysis.withoutProblems}</Li>
 	<Li liClass='text-red-500'># of pages with problems - {typographyAnalysis.withProblems}</Li>
 </List>
