@@ -1,13 +1,14 @@
 <script>
-  import { Button, Dropdown, DropdownItem, DropdownDivider, DropdownHeader, Checkbox, Helper, Avatar, Navbar, NavBrand, NavHamburger, NavLi, NavUl } from 'flowbite-svelte';
-  import { ChevronDownOutline, ChevronUpOutline, ChevronRightOutline, ChevronLeftOutline, DotsHorizontalOutline, DotsVerticalOutline, BellSolid, EyeSolid } from 'flowbite-svelte-icons';
+  // import { Dropdown, DropdownItem, DropdownDivider, DropdownHeader } from '$lib'
+  import { Button, Checkbox, Helper, Avatar, Navbar, NavBrand, NavHamburger, NavLi, NavUl, Radio, Toggle, Search, Dropdown, DropdownItem, DropdownDivider, DropdownHeader } from 'flowbite-svelte';
+  import { ChevronDownOutline, ChevronUpOutline, ChevronRightOutline, ChevronLeftOutline, DotsHorizontalOutline, DotsVerticalOutline, BellSolid, EyeSolid, UserRemoveSolid } from 'flowbite-svelte-icons';
   import { page } from '$app/stores';
   let dropdownOpen = false;
   let group1 = 2;
   let group2 = 2;
   let group3 = 2;
   $: activeUrl = $page.url.pathname;
-  let activeClass = 'text-green-700 dark:text-green-300 hover:text-green-900 dark:hover:text-green-500';
+  let activeClass = 'text-green-500 dark:text-green-300 hover:text-green-700 dark:hover:text-green-500';
 
   let searchTerm = ''
   const people = [
@@ -299,7 +300,7 @@ Show a list of toggle switch elements inside the dropdown menu to enable a yes o
 
 <p>You can also use the dropdown element inside a navigation bar and add a second level of navigation hierarchy, but make sure to use Navbar components.</p>
 
-<div class='mt-8 border w-full mx-auto bg-gradient-to-r bg-white dark:bg-gray-900 p-6 flex justify-center items-start h-64'>
+<div class='mt-8 border w-full mx-auto bg-gradient-to-r bg-white dark:bg-gray-900 p-6 flex justify-center items-start h-96'>
 <Navbar let:hidden let:toggle>
   <NavBrand href="/">
     <img src="/images/flowbite-svelte-icon-logo.svg" class="me-3 h-6 sm:h-9" alt="Flowbite Logo" />
@@ -309,7 +310,7 @@ Show a list of toggle switch elements inside the dropdown menu to enable a yes o
   <NavUl {hidden} class="ms-3 pt-6">
     <NavLi href="/" active={true}>Home</NavLi>
     <NavLi class="cursor-pointer">
-      Dropdown<ChevronDownOutline class="w-6 h-6 ms-2 text-white dark:text-white" />
+      Dropdown<ChevronDownOutline class="w-6 h-6 ms-2 text-primary-800 dark:text-white inline" />
     </NavLi>
     <Dropdown>
       <DropdownItem>Dashboard</DropdownItem>
@@ -382,7 +383,7 @@ Use this example if you want to add a search bar inside the dropdown menu to be 
 Use the menu icon trigger element on components such as cards as an alternative element to the button.
 
 
-<div class='mt-8 border w-full mx-auto bg-gradient-to-r bg-white dark:bg-gray-900 p-6 flex justify-center items-start h-64'>
+<div class='mt-8 border w-full mx-auto bg-gradient-to-r bg-white dark:bg-gray-900 p-6 flex justify-center items-start gap-4 h-60'>
 <DotsHorizontalOutline class="dots-menu dark:text-white" />
 <DotsVerticalOutline class="dots-menu dark:text-white" />
 <Dropdown triggeredBy=".dots-menu">
@@ -492,19 +493,19 @@ Use this example to also show the name or email of the user next to the avatar f
 <h2>Sizes</h2>
 
 <p>The dropdown menus work with buttons of all sizes including smaller or larger ones.</p>
-<div class='mt-8 border w-full mx-auto bg-gradient-to-r bg-white dark:bg-gray-900 p-6 flex justify-center items-start h-80'>
-<Dropdown triggeredBy=".sizes">
-  <DropdownItem>Dashboard</DropdownItem>
-  <DropdownItem>Settings</DropdownItem>
-  <DropdownItem>Earnings</DropdownItem>
-  <DropdownItem slot="footer">Sign out</DropdownItem>
-</Dropdown>
-<Button class="sizes" size="sm">
-  Small dropdown<ChevronDownOutline class="w-6 h-6 ms-2 text-white dark:text-white" />
-</Button>
-<Button class="sizes" size="lg">
-  Large dropdown<ChevronDownOutline class="w-6 h-6 ms-2 text-white dark:text-white" />
-</Button>
+<div class='mt-8 border w-full mx-auto bg-gradient-to-r bg-white dark:bg-gray-900 p-6 flex justify-center items-start h-80 gap-4'>
+  <Dropdown triggeredBy=".sizes">
+    <DropdownItem>Dashboard</DropdownItem>
+    <DropdownItem>Settings</DropdownItem>
+    <DropdownItem>Earnings</DropdownItem>
+    <DropdownItem slot="footer">Sign out</DropdownItem>
+  </Dropdown>
+  <Button class="sizes" size="sm">
+    Small dropdown<ChevronDownOutline class="w-6 h-6 ms-2 text-white dark:text-white" />
+  </Button>
+  <Button class="sizes" size="lg">
+    Large dropdown<ChevronDownOutline class="w-6 h-6 ms-2 text-white dark:text-white" />
+  </Button>
 </div>
 
 <h2>Placement</h2>
@@ -512,30 +513,31 @@ Use this example to also show the name or email of the user next to the avatar f
 You can also use the `placement=top|right|bottom|left` options to choose the placement of the dropdown menu. By default the positioning is set to the bottom side of the button.
 
 
-<div class='mt-8 border w-full mx-auto bg-gradient-to-r bg-white dark:bg-gray-900 p-6 flex justify-center items-start h-96'>
-<Dropdown {placement} triggeredBy="#placements button">
-  <DropdownItem>Dashboard</DropdownItem>
-  <DropdownItem>Settings</DropdownItem>
-  <DropdownItem>Earnings</DropdownItem>
-  <DropdownItem slot="footer">Sign out</DropdownItem>
-</Dropdown>
-
-<!-- svelte-ignore a11y-no-static-element-interactions -->
-<div id="placements" class="flex flex-col justify-center items-center gap-2 h-96 my-8" on:mousedown={(e) => (placement = e.target.textContent.trim().split(' ')[1])}>
-  <Button>Dropdown top<ChevronUpOutline class="w-6 h-6 ms-2 text-white dark:text-white" /></Button>
-  <div class="flex space-x-2 rtl:space-x-reverse">
-    <Button><ChevronLeftOutline class="w-6 h-6 me-2 text-white dark:text-white" />Dropdown left</Button>
-    <Button>Dropdown right<ChevronRightOutline class="w-6 h-6 ms-2 text-white dark:text-white" /></Button>
+<div class='mt-8 border w-full mx-auto bg-gradient-to-r bg-white dark:bg-gray-900 p-6 '>
+  <Dropdown {placement} triggeredBy="#placements button">
+    <DropdownItem>Dashboard</DropdownItem>
+    <DropdownItem>Settings</DropdownItem>
+    <DropdownItem>Earnings</DropdownItem>
+    <DropdownItem slot="footer">Sign out</DropdownItem>
+  </Dropdown>
+  
+  <!-- svelte-ignore a11y-no-static-element-interactions -->
+  <div id="placements" class="flex flex-col justify-center items-center gap-2 h-96 my-8" on:mousedown={(e) => (placement = e.target.textContent.trim().split(' ')[1])}>
+    <Button>Dropdown top<ChevronUpOutline class="w-6 h-6 ms-2 text-white dark:text-white" /></Button>
+    <div class="flex space-x-2 rtl:space-x-reverse">
+      <Button><ChevronLeftOutline class="w-6 h-6 me-2 text-white dark:text-white" />Dropdown left</Button>
+      <Button>Dropdown right<ChevronRightOutline class="w-6 h-6 ms-2 text-white dark:text-white" /></Button>
+    </div>
+    <Button>Dropdown bottom<ChevronDownOutline class="w-6 h-6 ms-2 text-white dark:text-white" /></Button>
   </div>
-  <Button>Dropdown bottom<ChevronDownOutline class="w-6 h-6 ms-2 text-white dark:text-white" /></Button>
-</div>
 </div>
 
 <h2>Double placement</h2>
 
 As dropdown is implemented using the [Floating UI](https://floating-ui.com) library, placement can be further specified by using the `Placement` type defined in [Floating UI docs](https://floating-ui.com/docs/computePosition#placement)
 
-<div class='mt-8 border w-full mx-auto bg-gradient-to-r bg-white dark:bg-gray-900 p-6 flex justify-center items-start h-96'>
+<div class='mt-8 border w-full mx-auto bg-gradient-to-r bg-white dark:bg-gray-900 p-6 flex justify-center items-center gap-2 h-96'>
+
 <!-- svelte-ignore a11y-no-static-element-interactions -->
 <div on:mousedown={(e) => (placement = e.target.dataset.placement)}>
   <Button data-placement="left-start">

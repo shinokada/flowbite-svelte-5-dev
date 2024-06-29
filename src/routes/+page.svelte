@@ -19,7 +19,6 @@
 		},
 		avatar: {
 			checked: true,
-			problems: 'Dropdown example'
 		},
 		badge: {
 			checked: true,
@@ -41,11 +40,11 @@
 		},
 		cards: {
 			checked: true,
-			problems: 'User profile card dropdown react to hover and a wrong direction.'
+			// problems: 'User profile card dropdown react to hover and a wrong direction.'
 		},
 		carousel: {
 			checked: true,
-			problems: 'Advanced customization arrows'
+			// problems: 'Advanced customization arrows'
 		},
 		darkmode: {
 			checked: true
@@ -58,7 +57,7 @@
 		},
 		dropdown: {
 			checked: true,
-			problems: 'One or more examples crushes the server.Wrong direction, opens with hover, Adding links and active class, Menu example, other examples'
+			problems: 'Adding links and active class'
 		},
 		footer: {
 			checked: true
@@ -80,14 +79,14 @@
 		},
 		megaMenu: {
 			checked: true,
-			problems: 'Menu opens upward when it is the bottom of the page.'
+			// problems: 'Menu opens upward when it is the bottom of the page.'
 		},
 		modal: {
 			checked: true,
 		},
 		navbar: {
 			checked: true,
-			problems: 'Navbar with dropdown example, User menu dropdown comes on hover. Small size menu transition jerks twice.'
+			problems: 'Mobile size menu transition jerks.'
 		},
 		pagination: {
 			checked: true
@@ -150,18 +149,18 @@
 		},
 		inputField: {
 			checked: true,
-			problems: 'Input Field dropdown example.'
+			// problems: 'Input Field dropdown example.'
 		},
 		radio: {
 			checked: true,
-			problems: 'Radio in dropdown example.'
+			// problems: 'Radio in dropdown example.'
 		},
 		range: {
 			checked: true
 		},
 		searchInput: {
 			checked: true,
-			problems: 'Search with dropdown example. Location search example.'
+			// problems: 'Search with dropdown example. Location search example.'
 		},
 		select: {
 			checked: true,

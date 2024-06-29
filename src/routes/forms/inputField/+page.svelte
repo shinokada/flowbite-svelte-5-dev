@@ -1,5 +1,6 @@
 <script>
   import { Input, Label, Helper, Button, Checkbox, A, CloseButton, InputAddon, ButtonGroup, NumberInput, Dropdown, DropdownItem } from 'flowbite-svelte';
+  // import { Dropdown, DropdownItem } from '$lib'
   import { EyeOutline, EyeSlashOutline, EnvelopeSolid, ChevronDownOutline, SearchOutline } from 'flowbite-svelte-icons';
   let show = false;
   let show1 = false;
@@ -306,3 +307,5 @@ If you need a full control over `input` HTML element while still re-using the Fl
   <input type="number" {...props} bind:value />
 </Input>
 </div>
+
+<div class='h-96 w-full'></div>
