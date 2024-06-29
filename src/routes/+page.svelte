@@ -84,7 +84,6 @@
 		},
 		modal: {
 			checked: true,
-			problems: 'Placement, Colors example'
 		},
 		navbar: {
 			checked: true,

@@ -27,6 +27,10 @@
  
   let color;
   let scrollingModal = false;
+  let activeModal = {
+    name: 'primaryModal',
+    active: false
+  }
 </script>
 
 <h1>Modal</h1>
@@ -200,7 +204,6 @@ You can use five different modal sizing options starting from extra small to ext
 
 <h2>Placement</h2>
 
-
 <div class='mt-8 border w-full mx-auto bg-gradient-to-r bg-white dark:bg-gray-900 p-6 flex justify-center'>
 <div class="inline-grid grid-cols-3 grid-rows-3 gap-4">
   <Button on:click={setPlacement}>top-left</Button>
@@ -228,15 +231,15 @@ You can use five different modal sizing options starting from extra small to ext
 
 
 <div class='mt-8 border w-full mx-auto bg-gradient-to-r bg-white dark:bg-gray-900 p-6 flex justify-center'>
-<div class="block space-y-4 md:space-y-0 md:space-x-4 rtl:space-x-reverse">
-  <Button on:click={() => {color = 'primary'; open = true;}}>Primary modal</Button>
-  <Button color="red" on:click={() => { color = 'red'; open = true; }}>Red modal</Button>
-  <Button color="green" on:click={() => { color = 'green'; open = true; }}>Green modal</Button>
-  <Button color="blue" on:click={() => { color = 'blue'; open = true; }}>Blue modal</Button>
-  <Button color="yellow" on:click={() => { color = 'yellow'; open = true; }}>Yellow modal</Button>
-</div>
+  <div class="block space-y-4 md:space-y-0 md:space-x-4 rtl:space-x-reverse">
+    <Button on:click={() => {color = 'primary'; activeModal = {name: 'primaryModal', active: true};  }}>Primary modal</Button>
+    <Button color="red" on:click={() => {color = 'red'; activeModal = {name: 'redModal', active: true};  }}>Red modal</Button>
+    <Button color="green" on:click={() => {color = 'green'; activeModal = {name: 'greenModal', active: true};  }}>Green modal</Button>
+    <Button color="blue" on:click={() => {color = 'blue'; activeModal = {name: 'blueModal', active: true};  }}>Blue modal</Button>
+    <Button color="yellow" on:click={() => {color = 'yellow'; activeModal = {name: 'yellowModal', active: true};  }}>Yellow modal</Button>
+  </div>
 
-<Modal title="Terms of Service" bind:open {color} autoclose>
+<Modal title="Terms of Service" bind:open={activeModal.active} {color} autoclose>
   <div class="text-base leading-relaxed">With less than a month to go before the European Union enacts new consumer privacy laws for its citizens, companies around the world are updating their terms of service agreements to comply.</div>
   <svelte:fragment slot="footer">
     <Button on:click={() => alert('Handle "success"')} {color}>I accept</Button>

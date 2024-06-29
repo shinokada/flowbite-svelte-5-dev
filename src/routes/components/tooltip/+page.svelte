@@ -2,7 +2,7 @@
   import { Tooltip, Button, P } from 'flowbite-svelte';
   let type = 'dark' as "auto" | "dark" | "light" | "custom";
 
-  let placement = 'left';
+  let placement = 'left' as  "top" | "right" | "bottom" | "left" | "top-start" | "top-end" | "right-start" | "right-end" | "bottom-start" | "bottom-end" | "left-start" | "left-end";
   // let placement = '';
 </script>
 
