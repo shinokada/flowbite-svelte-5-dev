@@ -240,7 +240,19 @@ Dynamically show the password strength progress when creating a new password pos
 
 Set the position of the popover component relative to the trigger element by using the `placement=top|right|bottom|left` data attribute and its values.
 
-REMOVED
+
+
+<div class='mt-8 border w-full mx-auto bg-gradient-to-r bg-white dark:bg-gray-900 p-6 flex gap-4 flex-col justify-center items-center h-96'>
+  <Button id="placement-top">Top popover</Button>
+  <Popover triggeredBy="#placement-top" placement='top' class="w-64 text-sm font-light " title="Popover top">And here's some amazing content. It's very engaging. Right?</Popover>
+  <Button id="placement-left">Left popover</Button>
+  <Popover triggeredBy="#placement-left" placement='left' class="w-64 text-sm font-light " title="Popover left">And here's some amazing content. It's very engaging. Right?</Popover>
+  <Button id="placement-right">Right popover</Button>
+  <Popover triggeredBy="#placement-right" placement='right' class="w-64 text-sm font-light " title="Popover right">And here's some amazing content. It's very engaging. Right?</Popover>
+  <Button id="placement-bottom">Bottom popover</Button>
+  <Popover triggeredBy="#placement-bottom" placement='bottom' class="w-64 text-sm font-light " title="Popover bottom">And here's some amazing content. It's very engaging. Right?</Popover>
+</div>
+
 
 <h2>Triggering</h2>
 
@@ -289,4 +301,14 @@ You can also disable the popover arrow by setting `arrow` attribute to `false`.
 
 If you need the popover to be attached to the other element then the tiggering one you can pass a CSS query to `reference` prop.
 
-REMOVED
+<div class='mt-8 border w-full mx-auto bg-gradient-to-r bg-white dark:bg-gray-900 p-6 flex gap-4 flex-col justify-center items-center h-72'>
+  <div id="ext-ref" class="p-2 rounded-lg border border-gray-200 dark:border-gray-600">External reference</div>
+<div class="space-x-4 rtl:space-x-reverse">
+  <Button id="ref-1">Left</Button>
+  <Button id="ref-2">Top</Button>
+  <Button id="ref-3">Right</Button>
+</div>
+<Popover reference="#ext-ref" triggeredBy="#ref-1" class="w-64 text-sm font-light " placement = 'left' title="Placement: Left">And here's some amazing content. It's very engaging. Right?</Popover>
+<Popover reference="#ext-ref" triggeredBy="#ref-2" class="w-64 text-sm font-light " placement = 'top' title="Placement: Top">And here's some amazing content. It's very engaging. Right?</Popover>
+<Popover reference="#ext-ref" triggeredBy="#ref-3" class="w-64 text-sm font-light " placement = 'right' title="Placement: Right">And here's some amazing content. It's very engaging. Right?</Popover>
+</div>

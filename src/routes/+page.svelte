@@ -86,14 +86,14 @@
 		},
 		navbar: {
 			checked: true,
-			problems: 'Mobile size menu transition jerks.'
+			problems: 'Mobile size menu transition jerks. See Svelte coverage report at https://svelte-5-preview.vercel.app/coverage/src/transition/index.html'
 		},
 		pagination: {
 			checked: true
 		},
 		popover: {
 			checked: true,
-			problems: 'Animation, Placement, External reference examples: removed for now'
+			problems: 'Animation'
 		},
 		progress: {
 			checked: true

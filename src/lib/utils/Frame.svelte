@@ -128,6 +128,9 @@
 
   let divClass: string;
   $: divClass = twMerge(bgColors[color], textColors[color], rounded && 'rounded-lg', border && 'border', borderColors[color], shadow && 'shadow-md', $$props.class);
+
+
+  console.log('params: ', params, transition)
 </script>
 
 {#if transition && open}
