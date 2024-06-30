@@ -234,7 +234,7 @@
 
 </script>
 
-<h1>Flowbite Svelte Check for Svelte 5 (No Runes)</h1>
+<h1>Flowbite Svelte Check for Svelte 5 Legacy mode (No Runes)</h1>
 
 <h2>Components</h2>
 <List tag="ul" class="space-y-1 text-gray-500 dark:text-gray-400" list="none">
