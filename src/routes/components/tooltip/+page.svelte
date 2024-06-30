@@ -34,10 +34,12 @@ If you have anything else between the button and tooltip, they won't find each o
 You can use choose between dark and light version styles for the tooltip component by changing the utility classes from Tailwind CSS and by applying the `type=light|dark` data attribute.
 
 <div class='mt-8 border w-full mx-auto bg-gradient-to-r bg-white dark:bg-gray-900 p-6 flex items-end h-32 gap-2'>
-<Button id="type-1" on:mouseenter={()=> type='light'}>Light tooltip</Button>
-<Button id="type-2" on:mouseenter={()=> type='auto'}>Default tooltip</Button>
-<Button id="type-3" on:mouseenter={()=> type='dark'}>Dark tooltip</Button>
-<Tooltip {type} triggeredBy="[id^='type-']">Tooltip content</Tooltip>
+<Button id="type-1" >Light tooltip</Button>
+<Tooltip type='light' triggeredBy="#type-1">Tooltip content</Tooltip>
+<Button id="type-2" >Default tooltip</Button>
+<Tooltip type='auto' triggeredBy="#type-2">Tooltip content</Tooltip>
+<Button id="type-3" >Dark tooltip</Button>
+<Tooltip type='dark' triggeredBy="#type-3">Tooltip content</Tooltip>
 </div>
 
 <h2>Placement</h2>
@@ -47,12 +49,21 @@ The positioning of the tooltip element relative to the triggering element (eg. b
 **Note!** This examples shows you also how to share one tooltip between multiple triggering elements using advanced CSS query.
 
 <div class='mt-8 border w-full mx-auto bg-gradient-to-r bg-white dark:bg-gray-900 p-6 flex items-center justify-center gap-2 h-36'>
-<Button id="placement-1" on:mouseenter={()=> placement='left'}>Tooltip left</Button>
-<Button id="placement-2" on:mouseenter={()=> placement='top'}>Tooltip top</Button>
-<Button id="placement-3" on:mouseenter={()=> placement='bottom'}>Tooltip bottom</Button>
-<Button id="placement-4" on:mouseenter={()=> placement='right'}>Tooltip right</Button>
-<Tooltip triggeredBy="[id^='placement-']" {placement} type='dark'>
-  Tooltip content - {placement}
+<Button id="placement-1">Tooltip left</Button>
+<Tooltip triggeredBy="#placement-1" placement='left'>
+  Tooltip content - Left
+</Tooltip>
+<Button id="placement-2">Tooltip top</Button>
+<Tooltip triggeredBy="#placement-2" placement='top'>
+  Tooltip content - Top
+</Tooltip>
+<Button id="placement-3">Tooltip bottom</Button>
+<Tooltip triggeredBy="#placement-3" placement='bottom'>
+  Tooltip content - Bottom
+</Tooltip>
+<Button id="placement-4" >Tooltip right</Button>
+<Tooltip triggeredBy="#placement-4" placement='right'>
+  Tooltip content - Right
 </Tooltip>
 </div>
 

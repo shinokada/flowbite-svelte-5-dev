@@ -514,22 +514,41 @@ You can also use the `placement=top|right|bottom|left` options to choose the pla
 
 
 <div class='mt-8 border w-full mx-auto bg-gradient-to-r bg-white dark:bg-gray-900 p-6 '>
-  <Dropdown {placement} triggeredBy="#placements button">
-    <DropdownItem>Dashboard</DropdownItem>
-    <DropdownItem>Settings</DropdownItem>
-    <DropdownItem>Earnings</DropdownItem>
-    <DropdownItem slot="footer">Sign out</DropdownItem>
-  </Dropdown>
   
-  <!-- svelte-ignore a11y-no-static-element-interactions -->
-  <div id="placements" class="flex flex-col justify-center items-center gap-2 h-96 my-8" on:mousedown={(e) => (placement = e.target.textContent.trim().split(' ')[1])}>
-    <Button>Dropdown top<ChevronUpOutline class="w-6 h-6 ms-2 text-white dark:text-white" /></Button>
-    <div class="flex space-x-2 rtl:space-x-reverse">
-      <Button><ChevronLeftOutline class="w-6 h-6 me-2 text-white dark:text-white" />Dropdown left</Button>
-      <Button>Dropdown right<ChevronRightOutline class="w-6 h-6 ms-2 text-white dark:text-white" /></Button>
-    </div>
-    <Button>Dropdown bottom<ChevronDownOutline class="w-6 h-6 ms-2 text-white dark:text-white" /></Button>
+<Dropdown placement='top' triggeredBy="#top-dd">
+  <DropdownItem>Dashboard</DropdownItem>
+  <DropdownItem>Settings</DropdownItem>
+  <DropdownItem>Earnings</DropdownItem>
+  <DropdownItem slot="footer">Sign out</DropdownItem>
+</Dropdown>
+<Dropdown placement='bottom' triggeredBy="#bottom-dd">
+  <DropdownItem>Dashboard</DropdownItem>
+  <DropdownItem>Settings</DropdownItem>
+  <DropdownItem>Earnings</DropdownItem>
+  <DropdownItem slot="footer">Sign out</DropdownItem>
+</Dropdown>
+<Dropdown placement='right' triggeredBy="#right-dd">
+  <DropdownItem>Dashboard</DropdownItem>
+  <DropdownItem>Settings</DropdownItem>
+  <DropdownItem>Earnings</DropdownItem>
+  <DropdownItem slot="footer">Sign out</DropdownItem>
+</Dropdown>
+<Dropdown placement='left' triggeredBy="#left-dd">
+  <DropdownItem>Dashboard</DropdownItem>
+  <DropdownItem>Settings</DropdownItem>
+  <DropdownItem>Earnings</DropdownItem>
+  <DropdownItem slot="footer">Sign out</DropdownItem>
+</Dropdown>
+
+<!-- svelte-ignore a11y-no-static-element-interactions -->
+<div id="placements" class="flex flex-col justify-center items-center gap-2 h-96 my-8">
+  <Button id='top-dd'>Dropdown top<ChevronUpOutline class="w-6 h-6 ms-2 text-white dark:text-white" /></Button>
+  <div class="flex space-x-2 rtl:space-x-reverse">
+    <Button id='left-dd'><ChevronLeftOutline class="w-6 h-6 me-2 text-white dark:text-white" />Dropdown left</Button>
+    <Button id='right-dd'>Dropdown right<ChevronRightOutline class="w-6 h-6 ms-2 text-white dark:text-white" /></Button>
   </div>
+  <Button id='bottom-dd'>Dropdown bottom<ChevronDownOutline class="w-6 h-6 ms-2 text-white dark:text-white" /></Button>
+</div>
 </div>
 
 <h2>Double placement</h2>
@@ -568,19 +587,3 @@ As dropdown is implemented using the [Floating UI](https://floating-ui.com) libr
   <DropdownItem on:click={handleClick}>Rendered as button</DropdownItem>
 </Dropdown>
 </div>
-
-<h2>Adding links and active class</h2>
-
-When you need to include a link with an active class, you can follow the example below:
-
-<div class='mt-8 border w-full mx-auto bg-gradient-to-r bg-white dark:bg-gray-900 p-6 flex justify-center items-start h-64'>
-<Button>Dropdown button<ChevronDownOutline class="w-6 h-6 ms-2 text-white dark:text-white" /></Button>
-<Dropdown>
-  <DropdownItem href="/home" active={activeUrl === '/'}>Home</DropdownItem>
-  <DropdownItem href="/docs/pages/quickstart" active={activeUrl === '/docs/pages/quickstart'}>Quickstart</DropdownItem>
-  <DropdownItem href="/docs/components/dropdown" active={activeUrl === '/docs/components/dropdown'}>Dropdown</DropdownItem>
-  <DropdownItem href="/docs/components/accordion" active={activeUrl === '/docs/components/accordion'}>Accordion</DropdownItem>
-</Dropdown>
-</div>
-
-The active prop is utilized to dynamically apply an active class to the link when the activeUrl variable matches the current URL. Remember to customize the href value and the condition in the active prop based on your specific use case.

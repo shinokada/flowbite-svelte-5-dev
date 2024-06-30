@@ -57,7 +57,7 @@
 		},
 		dropdown: {
 			checked: true,
-			problems: 'Adding links and active class'
+			// problems: 'Adding links and active class'
 		},
 		footer: {
 			checked: true
@@ -127,7 +127,7 @@
 		},
 		tooltip: {
 			checked: true,
-			problems: 'Color dark changes to light, etc.'
+			// problems: 'Color dark changes to light, etc.'
 		},
 		typography: {
 			checked: true
