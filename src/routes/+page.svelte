@@ -15,7 +15,8 @@
 		  
 		},
 		alert: {
-			checked: true
+			checked: true,
+			problems: 'Dismissabel transition'
 		},
 		avatar: {
 			checked: true,
@@ -24,7 +25,8 @@
 			checked: true,
 		},
 		banner: {
-			checked: true
+			checked: true,
+			problems: 'add transition (Flowbite-Svelte v0.46 as well)'
 		},
 		bottomNavigation: {
 			checked: true
