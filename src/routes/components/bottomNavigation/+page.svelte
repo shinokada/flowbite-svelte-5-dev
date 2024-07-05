@@ -36,7 +36,7 @@
 
 <h1>Bottom navigation</h1>
 <h2>Default bottom navigation</h2>
-<div class='flex flex-col relative'>
+<div class='mt-8 border w-full mx-auto bg-gradient-to-r bg-white dark:bg-gray-900 p-6 relative'>
 <Skeleton class="py-4" />
 <ImagePlaceholder class="pb-20" />
 
@@ -57,7 +57,7 @@
 </div>
 
 <h2>Adding links and active class</h2>
-<div class='flex flex-col relative'>
+<div class='mt-8 border w-full mx-auto bg-gradient-to-r bg-white dark:bg-gray-900 p-6 relative'>
 
 <Skeleton class="py-4" />
 <ImagePlaceholder class="pb-20" />
@@ -78,7 +78,7 @@
 </BottomNav>
 </div>
 
-<div class="flex flex-col relative mt-16">
+<div class='mt-8 border w-full mx-auto bg-gradient-to-r bg-white dark:bg-gray-900 p-6 relative t-16'>
   <Skeleton class="py-4" />
 <ImagePlaceholder class="pb-20" />
 
@@ -98,7 +98,7 @@
 </BottomNav>
 </div>
 
-<div class="flex flex-col relative mt-16">
+<div class='mt-8 border w-full mx-auto bg-gradient-to-r bg-white dark:bg-gray-900 p-6 relative t-16'>
 
 <Skeleton class="py-4" />
 <ImagePlaceholder class="pb-20" />

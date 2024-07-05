@@ -6,7 +6,7 @@
 
 <h1>Alert</h1>
 <h2>Default alert</h2>
-<div class="flex flex-col gap-4">
+<div class='mt-8 border w-full mx-auto bg-gradient-to-r bg-white dark:bg-gray-900 p-6 space-y-4'>
 <Alert>
   <span class="font-medium">Default alert!</span>
   Change a few things up and try submitting again.
@@ -34,7 +34,7 @@
 </div>
 
 <h2>Alert with icons</h2>
-<div class="flex flex-col gap-4">
+<div class='mt-8 border w-full mx-auto bg-gradient-to-r bg-white dark:bg-gray-900 p-6 space-y-4'>
 <Alert>
   <InfoCircleSolid slot="icon" class="w-5 h-5" />
   <span class="font-medium">Default alert!</span>
@@ -68,7 +68,7 @@
 </div>
 
 <h2>Bordered alert</h2>
-<div class="flex flex-col gap-4">
+<div class='mt-8 border w-full mx-auto bg-gradient-to-r bg-white dark:bg-gray-900 p-6 space-y-4'>
 <Alert border>
   <InfoCircleSolid slot="icon" class="w-5 h-5" />
   <span class="font-medium">Default alert!</span>
@@ -102,7 +102,7 @@
 </div>
 
 <h2>Alerts with list </h2>
-<div class="flex flex-col gap-4">
+<div class='mt-8 border w-full mx-auto bg-gradient-to-r bg-white dark:bg-gray-900 p-6 space-y-4'>
   <Alert class="!items-start">
     <span slot="icon">
       <InfoCircleSolid class="w-5 h-5" />
@@ -130,7 +130,7 @@
 </div>
 
 <h2>Dismissable alerts</h2>
-<div class="flex flex-col gap-4">
+<div class='mt-8 border w-full mx-auto bg-gradient-to-r bg-white dark:bg-gray-900 p-6 space-y-4'>
   <Alert dismissable>
     <InfoCircleSolid slot="icon" class="w-5 h-5" />
     A simple default alert with an
@@ -168,7 +168,7 @@
 
 <h2>Border accent</h2>
 
-<div class="flex flex-col gap-4">
+<div class='mt-8 border w-full mx-auto bg-gradient-to-r bg-white dark:bg-gray-900 p-6 space-y-4'>
   <Alert rounded={false} class="border-t-4">
     <InfoCircleSolid slot="icon" class="w-5 h-5" />
     <span class="font-medium">Info alert!</span>
@@ -197,7 +197,7 @@
 </div>
 
 <h2>Additional content</h2>
-<div class="flex flex-col gap-4">
+<div class='mt-8 border w-full mx-auto bg-gradient-to-r bg-white dark:bg-gray-900 p-6 space-y-4'>
   <Alert>
     <div class="flex items-center gap-3">
       <InfoCircleSolid class="w-5 h-5" />

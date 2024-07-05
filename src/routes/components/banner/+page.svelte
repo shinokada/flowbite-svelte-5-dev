@@ -7,7 +7,7 @@
 
 <h2>Default banner</h2>
 
-<div class="relative flex flex-col">
+<div class='mt-8 border w-full mx-auto bg-gradient-to-r bg-white dark:bg-gray-900 p-6 relative'>
 <Skeleton class="py-4" />
 <ImagePlaceholder class="py-4" />
 
@@ -25,7 +25,7 @@
 </div>
 
 <h2>Bottom banner position</h2>
-<div class="relative flex flex-col">
+<div class='mt-8 border w-full mx-auto bg-gradient-to-r bg-white dark:bg-gray-900 p-6 relative'>
   <Skeleton class="py-4" />
 <ImagePlaceholder class="py-4" />
 
@@ -45,7 +45,7 @@
 </div>
 
 <h2>Marketing CTA banner</h2>
-<div class="relative flex flex-col">
+<div class='mt-8 border w-full mx-auto bg-gradient-to-r bg-white dark:bg-gray-900 p-6 relative'>
   <Skeleton class="py-4" />
 <ImagePlaceholder class="py-4" />
 
@@ -59,7 +59,7 @@
 </div>
 
 <h2>Newsletter sign-up banner</h2>
-<div class="relative flex flex-col">
+<div class='mt-8 border w-full mx-auto bg-gradient-to-r bg-white dark:bg-gray-900 p-6 relative'>
   <Skeleton class="py-4" />
 <ImagePlaceholder class="py-4" />
 
@@ -73,7 +73,7 @@
 </div>
 
 <h2>Informational banner</h2>
-<div class="relative flex flex-col">
+<div class='mt-8 border w-full mx-auto bg-gradient-to-r bg-white dark:bg-gray-900 p-6 relative'>
   <Skeleton class="py-4" />
 <ImagePlaceholder class="py-4" />
 

@@ -9,7 +9,7 @@
 <h1>Accordion</h1>
 
 <h2>Default accordion</h2>
-<div class="flex flex-col gap-4">
+<div class='mt-8 border w-full mx-auto bg-gradient-to-r bg-white dark:bg-gray-900 p-6'>
 <Accordion>
   <AccordionItem>
     <span slot="header">My Header 1</span>
@@ -37,7 +37,7 @@
 </div>
 
 <h2>Always open</h2>
-<div class="flex flex-col gap-4">
+<div class='mt-8 border w-full mx-auto bg-gradient-to-r bg-white dark:bg-gray-900 p-6'>
   <Accordion>
     <AccordionItem open>
       <span slot="header">Header 2-1</span>
@@ -51,7 +51,7 @@
 </div>
 
 <h2>Color option</h2>
-<div class="flex flex-col gap-4">
+<div class='mt-8 border w-full mx-auto bg-gradient-to-r bg-white dark:bg-gray-900 p-6'>
   <Accordion activeClass="bg-blue-100 dark:bg-gray-800 text-blue-600 dark:text-white focus:ring-4 focus:ring-blue-200 dark:focus:ring-blue-800" inactiveClass="text-gray-500 dark:text-gray-400 hover:bg-blue-100 dark:hover:bg-gray-800">
     <AccordionItem class="">
       <span slot="header">Header 2-1</span>
@@ -65,7 +65,7 @@
 </div>
 
 <h2>Flush accordion</h2>
-<div class="flex flex-col gap-4">
+<div class='mt-8 border w-full mx-auto bg-gradient-to-r bg-white dark:bg-gray-900 p-6'>
   <Accordion flush>
     <AccordionItem>
       <span slot="header">Header 2-1</span>
@@ -79,7 +79,7 @@
 </div>
 
 <h2>Arrow style</h2>
-<div class="flex flex-col gap-4">
+<div class='mt-8 border w-full mx-auto bg-gradient-to-r bg-white dark:bg-gray-900 p-6'>
   <Accordion>
     <AccordionItem>
       <span slot="header">Header 2-1</span>
@@ -106,7 +106,7 @@
 
 <h2>Icon Accordion</h2>
 
-<div class="flex flex-col gap-4">
+<div class='mt-8 border w-full mx-auto bg-gradient-to-r bg-white dark:bg-gray-900 p-6'>
   <Accordion>
     <AccordionItem>
       <span slot="header" class="text-base flex gap-2">
@@ -130,10 +130,10 @@
 </div>
 
 <h2>Multiple mode</h2>
-<div class="flex flex-col gap-4">
+<div class='mt-8 border w-full mx-auto bg-gradient-to-r bg-white dark:bg-gray-900 p-6'>
   <Button on:click={open_all}>Open all</Button>
 <Button on:click={close_all}>Close all</Button>
-<Accordion multiple>
+<Accordion multiple class='mt-8'>
   <AccordionItem bind:open={items[0]}>
     <span slot="header">My Header 1</span>
     <p class="mb-2 text-gray-500 dark:text-gray-400">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Illo ab necessitatibus sint explicabo ...</p>
@@ -156,7 +156,7 @@
 </div>
 
 <h2>Custom transitions</h2>
-<div class="flex flex-col gap-4">
+<div class='mt-8 border w-full mx-auto bg-gradient-to-r bg-white dark:bg-gray-900 p-6'>
   <Accordion>
     <AccordionItem>
       <span slot="header">My Header 1</span>
@@ -174,7 +174,7 @@
 </div>
 
 <h2>Nesting accordians</h2>
-<div class="flex flex-col gap-4">
+<div class='mt-8 border w-full mx-auto bg-gradient-to-r bg-white dark:bg-gray-900 p-6'>
   <Accordion>
     <AccordionItem open>
       <span slot="header">My Header 1</span>
