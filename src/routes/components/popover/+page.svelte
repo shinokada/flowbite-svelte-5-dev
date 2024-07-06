@@ -14,7 +14,7 @@ Make sure that you have the Flowbite JavaScript included in your project to enab
 
 <h2>Default popover</h2>
 
-<div class='mt-8 border w-full mx-auto bg-gradient-to-r bg-white dark:bg-gray-900 p-6 flex h-44 items-end justify-center'>
+<div class='mt-8 border w-full mx-auto bg-gradient-to-r bg-white dark:bg-gray-900 p-6 flex h-52 items-end justify-center'>
 <Button id="b1">Default popover</Button>
 <Popover class="w-64 text-sm font-light " title="Popover title" triggeredBy="#b1">And here's some amazing content. It's very engaging. Right?</Popover>
 </div>
@@ -240,9 +240,7 @@ Dynamically show the password strength progress when creating a new password pos
 
 Set the position of the popover component relative to the trigger element by using the `placement=top|right|bottom|left` data attribute and its values.
 
-
-
-<div class='mt-8 border w-full mx-auto bg-gradient-to-r bg-white dark:bg-gray-900 p-6 flex gap-4 flex-col justify-center items-center h-96'>
+<div class='mt-8 border w-full mx-auto bg-gradient-to-r bg-white dark:bg-gray-900 p-6 flex gap-4 flex-col justify-center items-center h-[480px]'>
   <Button id="placement-top">Top popover</Button>
   <Popover triggeredBy="#placement-top" placement='top' class="w-64 text-sm font-light " title="Popover top">And here's some amazing content. It's very engaging. Right?</Popover>
   <Button id="placement-left">Left popover</Button>
@@ -278,7 +276,7 @@ Increase or decrease the default offset by adding the `offset` attribute where t
 
 Customize the animation of the popover component by using the transition functions from Svelte.
 
-<div class='mt-8 border w-full mx-auto bg-gradient-to-r bg-white dark:bg-gray-900 p-6 flex h-44 items-end justify-center gap-8'>
+<div class='mt-8 border w-full mx-auto bg-gradient-to-r bg-white dark:bg-gray-900 p-6 flex h-52 items-end justify-center gap-8'>
 <Button>Fade popover</Button>
 <Popover class="w-64 text-sm font-light" title="Popover title" transition={fade} params={{ duration: 700 }}>And here's some amazing content. It's very engaging. Right?</Popover>
 <Button>Blur popover</Button>
@@ -292,7 +290,7 @@ Customize the animation of the popover component by using the transition functio
 You can also disable the popover arrow by setting `arrow` attribute to `false`.
 
 
-<div class='mt-8 border w-full mx-auto bg-gradient-to-r bg-white dark:bg-gray-900 p-6 flex h-44 items-end justify-center'>
+<div class='mt-8 border w-full mx-auto bg-gradient-to-r bg-white dark:bg-gray-900 p-6 flex h-52 items-end justify-center'>
 <Button id="arrow">Default popover</Button>
 <Popover arrow={false} class="w-64 text-sm font-light" title="Popover title" triggeredBy="#arrow">And here's some amazing content. It's very engaging. Right?</Popover>
 </div>
@@ -301,7 +299,7 @@ You can also disable the popover arrow by setting `arrow` attribute to `false`.
 
 If you need the popover to be attached to the other element then the tiggering one you can pass a CSS query to `reference` prop.
 
-<div class='mt-8 border w-full mx-auto bg-gradient-to-r bg-white dark:bg-gray-900 p-6 flex gap-4 flex-col justify-center items-center h-72'>
+<div class='mt-8 border w-full mx-auto bg-gradient-to-r bg-white dark:bg-gray-900 p-6 flex gap-4 flex-col justify-center items-center h-96'>
   <div id="ext-ref" class="p-2 rounded-lg border border-gray-200 dark:border-gray-600">External reference</div>
 <div class="space-x-4 rtl:space-x-reverse">
   <Button id="ref-1">Left</Button>

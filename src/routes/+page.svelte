@@ -26,7 +26,7 @@
 		},
 		banner: {
 			checked: true,
-			problems: 'add transition (Flowbite-Svelte v0.46 as well)'
+			// problems: 'add transition (Flowbite-Svelte v0.46 as well)'
 		},
 		bottomNavigation: {
 			checked: true

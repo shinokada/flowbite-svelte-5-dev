@@ -1,6 +1,9 @@
 <script>
+  import { slide } from 'svelte/transition';
+  import { quintOut } from 'svelte/easing';
   import { Banner, Skeleton, ImagePlaceholder } from 'flowbite-svelte';
   import { BullhornSolid, SalePercentSolid, ArrowRightOutline, BookOpenOutline } from 'flowbite-svelte-icons';
+  const params = { delay: 250, duration: 500, easing: quintOut }
 </script>
 
 <h1>Banner</h1>
@@ -89,5 +92,23 @@
   <a href="/" class="inline-flex px-3 py-2 me-2 text-xs font-medium text-white bg-primary-700 rounded-lg hover:bg-primary-800 focus:ring-4 focus:ring-primary-300 dark:bg-primary-600 dark:hover:bg-primary-700 focus:outline-none dark:focus:ring-primary-800">
     Get started <ArrowRightOutline class="w-3 h-3 ms-2" />
   </a>
+</Banner>
+</div>
+
+<h2>Transition</h2>
+<div class='mt-8 border w-full mx-auto bg-gradient-to-r bg-white dark:bg-gray-900 p-6 relative'>
+  <Skeleton class="py-4" />
+<ImagePlaceholder class="py-4" />
+
+<Banner id="default-banner" position="absolute" transition={slide} {params}>
+  <p class="flex items-center text-sm font-normal text-gray-500 dark:text-gray-400">
+    <span class="inline-flex p-1 me-3 bg-gray-200 rounded-full dark:bg-gray-600">
+      <BullhornSolid class="w-3 h-3 text-gray-500 dark:text-gray-400" />
+      <span class="sr-only">Light bulb</span>
+    </span>
+    <span>
+      New brand identity has been launched for the <a href="https://flowbite.com" class="inline font-medium text-primary-600 underline dark:text-primary-500 underline-offset-2 decoration-600 dark:decoration-500 decoration-solid hover:no-underline"> Flowbite Library </a>
+    </span>
+  </p>
 </Banner>
 </div>
