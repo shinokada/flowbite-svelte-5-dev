@@ -16,7 +16,7 @@
 		},
 		alert: {
 			checked: true,
-			problems: 'Dismissabel transition'
+			// problems: 'Dismissabel transition'
 		},
 		avatar: {
 			checked: true,
@@ -95,7 +95,7 @@
 		},
 		popover: {
 			checked: true,
-			problems: 'Animation'
+			// problems: 'Animation'
 		},
 		progress: {
 			checked: true
