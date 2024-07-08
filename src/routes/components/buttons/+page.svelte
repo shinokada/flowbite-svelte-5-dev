@@ -1,4 +1,4 @@
-<script>
+<script lang="ts">
   import { Button, GradientButton, Indicator, Spinner } from 'flowbite-svelte';
   import { EnvelopeSolid, ArrowRightOutline, CartSolid, ThumbsUpSolid } from 'flowbite-svelte-icons';
 

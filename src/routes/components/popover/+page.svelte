@@ -1,4 +1,4 @@
-<script>
+<script lang="ts">
   import { Popover, Button, Avatar, Label, Input, Checkbox } from 'flowbite-svelte';
   import { ChevronRightOutline, GlobeOutline, HeartSolid, ThumbsUpSolid, DotsHorizontalOutline, QuestionCircleSolid, DatabaseSolid, CheckOutline, CloseOutline } from 'flowbite-svelte-icons';
   let placement;
@@ -269,7 +269,7 @@ Increase or decrease the default offset by adding the `offset` attribute where t
 
 <div class='mt-8 border w-full mx-auto bg-gradient-to-r bg-white dark:bg-gray-900 p-6 flex h-52 items-end justify-center'>
 <Button id="offset">Default popover</Button>
-<Popover offset="30" class="w-64 text-sm font-light" title="Popover title" triggeredBy="#offset">And here's some amazing content. It's very engaging. Right?</Popover>
+<Popover offset={30} class="w-64 text-sm font-light" title="Popover title" triggeredBy="#offset">And here's some amazing content. It's very engaging. Right?</Popover>
 </div>
 
 <h2>Animation</h2>

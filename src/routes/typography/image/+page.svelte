@@ -1,4 +1,4 @@
-<script>
+<script lang="ts">
   import { Img, Badge } from 'flowbite-svelte';
 </script>
 

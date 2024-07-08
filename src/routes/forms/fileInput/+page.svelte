@@ -1,9 +1,10 @@
-<script>
+<script lang="ts">
   import { Fileupload, Label, Helper, Listgroup, ListgroupItem, Dropzone } from 'flowbite-svelte';
-  let value;
-  let files;
-  let zonevalue = [];
-  const dropHandle = (event) => {
+  let value: string;
+  let files: FileList | undefined;
+  // Dropzone
+  let zonevalue: any[] = [];
+  const dropHandle = (event: any) => {
     zonevalue = [];
     event.preventDefault();
     if (event.dataTransfer.items) {
@@ -21,7 +22,7 @@
     }
   };
 
-  const handleChange = (event) => {
+  const handleChange = (event: any) => {
     const files = event.target.files;
     if (files.length > 0) {
       value.push(files[0].name);
@@ -96,6 +97,7 @@ When the user selected multiple files, the `value` represents the first file in 
 
 <div class='mt-8 border w-full mx-auto bg-gradient-to-r bg-white dark:bg-gray-900 p-6'>
 <Dropzone
+  draggabel='true'
   id="dropzone"
   on:drop={dropHandle}
   on:dragover={(event) => {

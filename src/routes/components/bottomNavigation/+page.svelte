@@ -1,4 +1,4 @@
-<script>
+<script lang="ts">
   import { BottomNav, BottomNavItem, Skeleton, ImagePlaceholder, Tooltip, BottomNavHeaderItem, BottomNavHeader, Card, Listgroup, Avatar } from 'flowbite-svelte';
   import { HomeSolid, WalletSolid, AdjustmentsVerticalOutline, UserCircleSolid, PlusOutline, BookmarkSolid, AngleRightOutline, AngleLeftOutline, FileCirclePlusOutline, SearchOutline, UsersGroupOutline, ClockSolid, StarSolid } from 'flowbite-svelte-icons';
   import { page } from '$app/stores';

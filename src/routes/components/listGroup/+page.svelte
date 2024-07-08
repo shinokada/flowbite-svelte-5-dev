@@ -2,22 +2,26 @@
   import { Listgroup, ListgroupItem, Avatar } from 'flowbite-svelte';
   import { AdjustmentsHorizontalSolid, DownloadSolid, MessagesSolid, UserCircleSolid, TrashBinSolid } from 'flowbite-svelte-icons';
   import type { ListGroupItemType } from 'flowbite-svelte';
+  interface ListGroupLink extends ListGroupItemType {
+    href?: string; 
+    icon?: any; 
+  }
 
   let simpleList: string[] = ['Profile', 'Settings', 'Messages', 'Download'];
-  let links: ListGroupItemType[] = [
+  let links: ListGroupLink[] = [
     { name: 'Accordions', href: '/docs/components/accordion', current: true },
     { name: 'Alerts', href: '/docs/components/alert' },
     { name: 'Badges', href: '/docs/components/badge' },
     { name: 'Breadcrumbs', href: '/docs/components/breadcrumb', attrs: {target: '_blank'} }
   ];
-  let buttons: ListGroupItemType[] = [
+  let buttons: ListGroupLink[] = [
     { name: 'Profile', mycustomfield: 'data1', current: true },
     { name: 'Settings', mycustomfield: 'data2' },
     { name: 'Messages', mycustomfield: 'data3' },
     { name: 'Download', mycustomfield: 'data4', disabled: true, attrs: {type: 'submit'} }
   ];
 
-  let icons: ListGroupItemType[] = [
+  let icons: ListGroupLink[] = [
     { name: 'Profile', icon: UserCircleSolid },
     { name: 'Settings', icon: AdjustmentsHorizontalSolid },
     { name: 'Messages', icon: MessagesSolid },

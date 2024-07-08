@@ -16,8 +16,14 @@
   const sortDirection = writable(1); // default sort direction (ascending)
   const sortItems = writable(items.slice()); // make a copy of the items array
 
+  interface Item {
+    id: number;
+    maker: string;
+    type: string;
+    make: number;
+  }
   // Define a function to sort the items
-  const sortTable = (key) => {
+  const sortTable = (key: string) => {
     // If the same key is clicked, reverse the sort direction
     if ($sortKey === key) {
       sortDirection.update((val) => -val);
@@ -31,8 +37,10 @@
     const key = $sortKey;
     const direction = $sortDirection;
     const sorted = [...$sortItems].sort((a, b) => {
-      const aVal = a[key];
-      const bVal = b[key];
+      // const aVal = a[key];
+      // const bVal = b[key];
+      const aVal = a[key as keyof Item];
+      const bVal = b[key as keyof Item];
       if (aVal < bVal) {
         return -direction;
       } else if (aVal > bVal) {

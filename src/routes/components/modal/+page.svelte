@@ -1,4 +1,4 @@
-<script>
+<script lang="ts">
   import { Button, Modal, P, Label, Input, Checkbox } from 'flowbite-svelte';
   import { ExclamationCircleOutline, QuestionCircleOutline } from 'flowbite-svelte-icons';
   import MetaMask from '../../utils/icons/MetaMask.svelte';
@@ -6,6 +6,8 @@
   import OperaWallet from '../../utils/icons/OperaWallet.svelte';
   import Fortmatic from '../../utils/icons/Fortmatic.svelte';
   import WalletConnect from '../../utils/icons/WalletConnect.svelte';
+  import type { SizeType, ModalPlacementType } from 'flowbite-svelte'
+  import { type ComponentProps } from 'svelte';
   
   let defaultModal = false;
   let clickOutsideModal = false;
@@ -13,19 +15,19 @@
   let formModal = false;
   let walletModal = false;
   let openModal = false;
-  let size;
+  let size: SizeType;
 
-  let id;
-  let placement;
+  let id: string;
+  let placement: ModalPlacementType;
   let open = false;
 
-  const setPlacement = (ev) => {
-    placement = ev.target.textContent; // text in the button
+  const setPlacement = (ev: MouseEvent) => {
+    placement = ev.target?.textContent; // text in the button
     id = `${placement}-modal`;
     open = !open;
   };
  
-  let color;
+  let color: "dark" | "red" | "yellow" | "green" | "purple" | "blue" | "primary" | "light" | "none" | "alternative" | undefined;
   let scrollingModal = false;
   let activeModal = {
     name: 'primaryModal',
@@ -135,7 +137,7 @@ Use this web3 modal component to show crypto wallet connection options like Meta
 <div class='mt-8 border w-full mx-auto bg-gradient-to-r bg-white dark:bg-gray-900 p-6 flex justify-center'>
 <Button on:click={() => (walletModal = true)}>Crypto wallet modal</Button>
 
-<Modal title="Connect wallet" bind:open={walletModal} size="xs" padding="xs">
+<Modal title="Connect wallet" bind:open={walletModal} size="xs" >
   <p class="text-sm font-normal text-gray-500 dark:text-gray-400">Connect with one of our available wallet providers or create a new one.</p>
   <ul class="my-4 space-y-3">
     <li>

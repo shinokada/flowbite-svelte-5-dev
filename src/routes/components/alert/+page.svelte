@@ -1,4 +1,4 @@
-<script>
+<script lang="ts">
   import { Alert, Li, List, Button  } from 'flowbite-svelte';
   import { InfoCircleSolid, EyeSolid } from 'flowbite-svelte-icons';
   import { fly } from 'svelte/transition';

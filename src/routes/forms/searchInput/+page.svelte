@@ -1,4 +1,4 @@
-<script>
+<script lang="ts">
   import { Search, Button, Dropdown, DropdownItem } from 'flowbite-svelte';
   import { SearchOutline, ChevronDownOutline, MicrophoneSolid } from 'flowbite-svelte-icons';
   const items = [
@@ -122,8 +122,8 @@ Use this example where you can select a country in which you want to search for 
 <form class="flex">
   <div class="relative">
     <Button class="rounded-e-none whitespace-nowrap border border-e-0 border-primary-700">
-      <img class="h-3.5 w-3.5 rounded-full me-2" src={buttonLabel.icon} alt={buttonLabel.label}>
-      {buttonLabel.labelSelected}
+      <img class="h-3.5 w-3.5 rounded-full me-2" src={buttonLabel?.icon} alt={buttonLabel?.label}>
+      {buttonLabel?.labelSelected}
       <ChevronDownOutline class="w-2.5 h-2.5 ms-2.5" />
     </Button>
     <Dropdown classContainer="w-40">

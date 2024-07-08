@@ -1,4 +1,4 @@
-<script>
+<script lang="ts">
   import { page } from '$app/stores';
   import { Sidebar, SidebarGroup, SidebarItem, SidebarWrapper, SidebarDropdownWrapper, SidebarDropdownItem, SidebarCta, SidebarBrand, A } from 'flowbite-svelte';
   import { sineIn } from 'svelte/easing';

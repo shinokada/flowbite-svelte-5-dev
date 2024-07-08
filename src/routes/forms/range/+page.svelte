@@ -1,4 +1,4 @@
-<script>
+<script lang="ts">
   import { Range, Label } from 'flowbite-svelte';
   let minmaxValue = 5;
   let stepValue = 2.5;

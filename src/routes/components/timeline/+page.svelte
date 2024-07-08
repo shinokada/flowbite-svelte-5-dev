@@ -1,4 +1,4 @@
-<script>
+<script lang="ts">
   import { Timeline, TimelineItem, Activity, ActivityItem, Group, GroupItem, Button, Badge } from 'flowbite-svelte';
   import { ArrowRightOutline, CalendarWeekSolid } from 'flowbite-svelte-icons';
   let activities = [

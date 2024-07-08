@@ -1,4 +1,4 @@
-<script>
+<script lang="ts">
   import { Radio, RadioButton, Table, TableHead, TableHeadCell, TableBody, TableBodyCell, TableBodyRow, Label, Helper, Dropdown, Button, ButtonGroup } from 'flowbite-svelte';
   import { ChevronDownOutline, ArrowRightOutline, ListMusicSolid, OrderedListOutline, ListOutline } from 'flowbite-svelte-icons';
 
@@ -48,7 +48,7 @@ If you need separate control over the label and the radio you can use the verbos
     <TableHeadCell>Left column</TableHeadCell>
     <TableHeadCell>Right column</TableHeadCell>
   </TableHead>
-  <TableBody class="divide-y dark:divide-gray-700">
+  <TableBody tableBodyClass="divide-y dark:divide-gray-700">
     <TableBodyRow class="divide-x rtl:divide-x-reverse dark:divide-gray-700">
       <TableBodyCell><Label for="radio1">Default radio</Label></TableBodyCell>
       <TableBodyCell><Label for="radio2">Disabled radio</Label></TableBodyCell>
@@ -207,7 +207,7 @@ Use this example of an advanced layout of radio elements where the label parent 
     </div>
   </Radio>
   <Radio name="custom" custom>
-    <div for="hosting-big" class="inline-flex justify-between items-center p-5 w-full text-gray-500 bg-white rounded-lg border border-gray-200 cursor-pointer dark:hover:text-gray-300 dark:border-gray-700 dark:peer-checked:text-primary-500 peer-checked:border-primary-600 peer-checked:text-primary-600 hover:text-gray-600 hover:bg-gray-100 dark:text-gray-400 dark:bg-gray-800 dark:hover:bg-gray-700">
+    <div id="hosting-big" class="inline-flex justify-between items-center p-5 w-full text-gray-500 bg-white rounded-lg border border-gray-200 cursor-pointer dark:hover:text-gray-300 dark:border-gray-700 dark:peer-checked:text-primary-500 peer-checked:border-primary-600 peer-checked:text-primary-600 hover:text-gray-600 hover:bg-gray-100 dark:text-gray-400 dark:bg-gray-800 dark:hover:bg-gray-700">
       <div class="block">
         <div class="w-full text-lg font-semibold">500-1000 MB</div>
         <div class="w-full">Good for large websites</div>

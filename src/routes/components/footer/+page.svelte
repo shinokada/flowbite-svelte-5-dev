@@ -1,4 +1,4 @@
-<script>
+<script lang="ts">
   import { Footer, FooterBrand, FooterCopyright, FooterIcon, FooterLink, FooterLinkGroup, Skeleton, ImagePlaceholder, TextPlaceholder } from 'flowbite-svelte';
   import { FacebookSolid, GithubSolid, DiscordSolid, TwitterSolid } from 'flowbite-svelte-icons';
   import Dribble from '../../utils/icons/Dribble.svelte';

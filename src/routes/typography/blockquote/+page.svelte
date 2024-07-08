@@ -1,4 +1,4 @@
-<script>
+<script lang="ts">
   import { P, A, Heading, Blockquote, Rating } from 'flowbite-svelte'; 
   import { QuoteSolid } from 'flowbite-svelte-icons';
 </script>

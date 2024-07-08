@@ -1,4 +1,4 @@
-<script>
+<script lang="ts">
   import { Tabs, TabItem, Timeline, TimelineItem, Button } from 'flowbite-svelte';
   import { ArrowRightOutline, UserCircleSolid, GridSolid, AdjustmentsVerticalSolid, ClipboardSolid } from 'flowbite-svelte-icons';
 </script>

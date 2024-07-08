@@ -151,7 +151,7 @@
 		},
 		inputField: {
 			checked: true,
-			// problems: 'Input Field dropdown example.'
+			problems: 'Dropzone click and select a file does not show file name.'
 		},
 		radio: {
 			checked: true,

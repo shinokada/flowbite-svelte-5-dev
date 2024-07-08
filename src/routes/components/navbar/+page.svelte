@@ -1,4 +1,4 @@
-<script>
+<script lang="ts">
   import { page } from '$app/stores';
   import { Navbar, NavBrand, NavLi, NavUl, NavHamburger, Avatar, Dropdown, DropdownItem, DropdownHeader, DropdownDivider, Button, Input, Skeleton, ImagePlaceholder, TextPlaceholder } from 'flowbite-svelte';
   import { SearchOutline, ChevronDownOutline } from 'flowbite-svelte-icons';

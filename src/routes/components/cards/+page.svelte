@@ -1,4 +1,4 @@
-<script>
+<script lang="ts">
   import { Card, Button, Dropdown, DropdownItem, Avatar, Toggle, Rating, Badge, Label, Input, Checkbox, Listgroup  } from 'flowbite-svelte';
   import { CheckCircleSolid, GiftBoxSolid, ArrowUpRightFromSquareOutline, ArrowRightOutline, DotsHorizontalOutline } from 'flowbite-svelte-icons';
   let vCard = false;

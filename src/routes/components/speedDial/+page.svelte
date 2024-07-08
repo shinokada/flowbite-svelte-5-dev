@@ -1,7 +1,9 @@
-<script>
+<script lang="ts">
   import { SpeedDial, SpeedDialButton, Listgroup, ListgroupItem, Rating, Alert } from 'flowbite-svelte';
   import { DotsHorizontalOutline, ShareNodesSolid, PrinterSolid, DownloadSolid, FileCopySolid, PenSolid } from 'flowbite-svelte-icons';
-  const placements = [
+  import type { Placement } from '@floating-ui/dom';
+
+  const placements: [string, Placement, Placement][] = [
     ['start-2 top-2', 'right', 'bottom'],
     ['end-6 top-2', 'bottom', 'left'],
     ['end-6 bottom-6', 'left', 'top'],

@@ -1,4 +1,4 @@
-<script>
+<script lang="ts">
   import { Input, Label, Helper, Button, Checkbox, A, CloseButton, InputAddon, ButtonGroup, NumberInput, Dropdown, DropdownItem } from 'flowbite-svelte';
   // import { Dropdown, DropdownItem } from '$lib'
   import { EyeOutline, EyeSlashOutline, EnvelopeSolid, ChevronDownOutline, SearchOutline } from 'flowbite-svelte-icons';

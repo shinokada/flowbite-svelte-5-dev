@@ -1,5 +1,6 @@
-<script>
+<script lang="ts">
   // import { Dropdown, DropdownItem, DropdownDivider, DropdownHeader } from '$lib'
+  import type { Placement } from '@floating-ui/dom';
   import { Button, Checkbox, Helper, Avatar, Navbar, NavBrand, NavHamburger, NavLi, NavUl, Radio, Toggle, Search, Dropdown, DropdownItem, DropdownDivider, DropdownHeader } from 'flowbite-svelte';
   import { ChevronDownOutline, ChevronUpOutline, ChevronRightOutline, ChevronLeftOutline, DotsHorizontalOutline, DotsVerticalOutline, BellSolid, EyeSolid, UserRemoveSolid } from 'flowbite-svelte-icons';
   import { page } from '$app/stores';
@@ -18,7 +19,7 @@
   ]
   $: filteredItems = people.filter((person) => person.name.toLowerCase().indexOf(searchTerm?.toLowerCase()) !== -1);
   let placement = 'left';
-  const handleClick = (e) => {
+  const handleClick = (e: MouseEvent) => {
     e.preventDefault();
     alert('Clicked on: ' + e.target);
   };
@@ -558,7 +559,9 @@ As dropdown is implemented using the [Floating UI](https://floating-ui.com) libr
 <div class='mt-8 border w-full mx-auto bg-gradient-to-r bg-white dark:bg-gray-900 p-6 flex justify-center items-center gap-2 h-96'>
 
 <!-- svelte-ignore a11y-no-static-element-interactions -->
-<div on:mousedown={(e) => (placement = e.target.dataset.placement)}>
+<div on:mousedown={(e) => {if (e.target instanceof HTMLElement) {
+  placement = e.target.dataset.placement || 'bottom'; 
+}}}>
   <Button data-placement="left-start">
     Dropdown left start<ChevronUpOutline class="w-6 h-6 ms-2 text-white dark:text-white" />
   </Button>
@@ -567,7 +570,7 @@ As dropdown is implemented using the [Floating UI](https://floating-ui.com) libr
   </Button>
 </div>
 
-<Dropdown {placement} triggeredBy="[data-placement]">
+<Dropdown placement={placement as Placement} triggeredBy="[data-placement]">
   <DropdownItem>Dashboard</DropdownItem>
   <DropdownItem>Settings</DropdownItem>
   <DropdownItem>Earnings</DropdownItem>

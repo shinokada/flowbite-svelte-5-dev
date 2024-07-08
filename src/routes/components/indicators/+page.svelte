@@ -1,4 +1,4 @@
-<script>
+<script lang="ts">
   import { Indicator, Avatar, Badge, Button } from 'flowbite-svelte';
   import { EnvelopeSolid, CheckCircleSolid } from 'flowbite-svelte-icons';
 </script>

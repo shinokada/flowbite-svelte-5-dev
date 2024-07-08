@@ -1,4 +1,4 @@
-<script>
+<script lang="ts">
   import { Navbar, NavBrand, NavHamburger, NavUl, NavLi, MegaMenu, Button } from 'flowbite-svelte';
   import { IconOutline, ChevronDownOutline, UserCircleOutline, ArrowRightOutline } from 'flowbite-svelte-icons';
   let menu = [

@@ -1,7 +1,7 @@
-<script>
+<script lang="ts">
   import { Badge, Indicator, Button } from 'flowbite-svelte';
   import { ClockSolid, EnvelopeSolid, CheckOutline, CloseCircleSolid } from 'flowbite-svelte-icons';
-  function handleClose(event) {
+  function handleClose(event: MouseEvent) {
     alert('Badge dismissed');
   }
 </script>
@@ -65,11 +65,6 @@
 
 <h2>Badges with icon</h2>
 <div class='mt-8 border w-full mx-auto bg-gradient-to-r bg-white dark:bg-gray-900 p-6'>
-  <script>
-    import { Badge } from 'flowbite-svelte';
-    import { ClockSolid } from 'flowbite-svelte-icons';
-  </script>
-  
   <Badge color="dark" border>
     <ClockSolid class="w-2.5 h-2.5 me-1.5" />
     3 days ago

@@ -1,4 +1,4 @@
-<script>
+<script lang="ts">
   import { P, A, Layout, Popover } from 'flowbite-svelte';
   import { ChevronRightOutline } from 'flowbite-svelte-icons';
 </script>

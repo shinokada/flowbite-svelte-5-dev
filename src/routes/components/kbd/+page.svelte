@@ -1,4 +1,4 @@
-<script>
+<script lang="ts">
   import { Kbd, Table, TableHead, TableHeadCell, TableBody, TableBodyCell, TableBodyRow, ArrowKeyUp, ArrowKeyDown, ArrowKeyRight, ArrowKeyLeft } from 'flowbite-svelte';
 </script>
 
@@ -42,7 +42,7 @@ The KBD component can also be used inside table components to denote what type o
     <TableHeadCell>Key</TableHeadCell>
     <TableHeadCell>Description</TableHeadCell>
   </TableHead>
-  <TableBody class="divide-y">
+  <TableBody tableBodyClass="divide-y">
     <TableBodyRow>
       <TableBodyCell>
         <Kbd class="px-2 py-1.5">Shift</Kbd> or <Kbd class="px-2 py-1.5">Tab</Kbd>

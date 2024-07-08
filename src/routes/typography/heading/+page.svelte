@@ -1,4 +1,4 @@
-<script>
+<script lang="ts">
   import { Heading, P, A, Mark, Secondary, Button, Badge, Span, Breadcrumb, BreadcrumbItem } from 'flowbite-svelte';
   import { ArrowRightOutline, ChevronRightOutline } from 'flowbite-svelte-icons';
 </script>

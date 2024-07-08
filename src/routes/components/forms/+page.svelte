@@ -1,4 +1,4 @@
-<script>
+<script lang="ts">
   import { Label, Input, Helper, ButtonGroup, Textarea, Select, MultiSelect, Checkbox, Radio, Fileupload, Toggle, InputAddon } from 'flowbite-svelte';
   
   import { EnvelopeSolid, UserCircleSolid } from 'flowbite-svelte-icons';
@@ -10,14 +10,15 @@
     placeholder: 'Leave a comment...'
   };
 
-  let selected;
+  let selected: string | undefined;
 
   let countries = [
     { value: 'us', name: 'United States' },
     { value: 'ca', name: 'Canada' },
     { value: 'fr', name: 'France' }
   ];
-  let selected2 = [];
+ 
+  let selected2: string[] = [];
   let countries2 = [
     { value: 'us', name: 'United States' },
     { value: 'ca', name: 'Canada' },

@@ -1,4 +1,4 @@
-<script>
+<script lang="ts">
   import { AccordionItem, Accordion, Button } from 'flowbite-svelte';
   import { ChevronDoubleUpOutline, ChevronDoubleDownOutline, CartSolid, CogOutline } from 'flowbite-svelte-icons';
   const items = Array(3);

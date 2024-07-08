@@ -1,4 +1,4 @@
-<script>
+<script lang="ts">
   import { List, Li, Heading, A, Span, DescriptionList } from 'flowbite-svelte';
   import { CheckCircleSolid, CloseCircleSolid, CheckOutline } from 'flowbite-svelte-icons';
 </script>

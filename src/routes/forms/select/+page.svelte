@@ -1,12 +1,13 @@
-<script>
+<script lang="ts">
   import { Select, Label, Dropdown, DropdownItem, Badge, MultiSelect, Kbd, ArrowKeyDown, ArrowKeyUp } from 'flowbite-svelte';
   import { ChevronDownOutline } from 'flowbite-svelte-icons';
   import Usa from '../../utils/icons/Usa.svelte';
   import Germany from '../../utils/icons/Germany.svelte';
   import Italy from '../../utils/icons/Italy.svelte';
   import China from '../../utils/icons/China.svelte';
+  import type { SelectOptionType } from 'flowbite-svelte';
 
-  let countries = [
+  let countries: SelectOptionType<any>[] = [
     { value: 'us', name: 'United States' },
     { value: 'ca', name: 'Canada' },
     { value: 'fr', name: 'France' }
@@ -22,7 +23,7 @@
     { value: 'MI', name: 'Michigan' }
   ];
 
-  let selected2 = [];
+  let selected2: SelectOptionType<any>[] = [];
   let countries2 = [
     { value: 'us', name: 'United States' },
     { value: 'ca', name: 'Canada' },
@@ -32,7 +33,7 @@
   ];
   let placeholder = 'placeholder text';
   let selected3 = ['us', 'fr'];
-  let selected4;
+  let selected4: SelectOptionType<any>[] = [];
 </script>
 
 <h1>Select</h1>

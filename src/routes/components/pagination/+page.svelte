@@ -1,21 +1,22 @@
-<script>
+<script lang="ts">
   import { page } from '$app/stores';
   import { Pagination, PaginationItem } from 'flowbite-svelte';
   import { ChevronLeftOutline, ChevronRightOutline, ArrowLeftOutline, ArrowRightOutline  } from 'flowbite-svelte-icons';
+  import type { LinkType } from 'flowbite-svelte'
 
   $: activeUrl = $page.url.searchParams.get('page');
-  let pages = [
-    { name: 1, href: '/components/pagination?page=1' },
-    { name: 2, href: '/components/pagination?page=2' },
-    { name: 3, href: '/components/pagination?page=3' },
-    { name: 4, href: '/components/pagination?page=4' },
-    { name: 5, href: '/components/pagination?page=5' }
+  let pages: LinkType[] = [
+    { name: '1', href: '/components/pagination?page=1' },
+    { name: '2', href: '/components/pagination?page=2' },
+    { name: '3', href: '/components/pagination?page=3' },
+    { name: '4', href: '/components/pagination?page=4' },
+    { name: '5', href: '/components/pagination?page=5' }
   ];
 
   $: {
     pages.forEach((page) => {
-      let splitUrl = page.href.split('?');
-      let queryString = splitUrl.slice(1).join('?');
+      let splitUrl = page.href?.split('?');
+      let queryString = splitUrl?.slice(1).join('?');
       const hrefParams = new URLSearchParams(queryString);
       let hrefValue = hrefParams.get('page');
       if (hrefValue === activeUrl) {
@@ -34,18 +35,18 @@
     alert('Next btn clicked. Make a call to your server to fetch data.');
   };
 
-  let pages2 = [
-    { name: 6, href: '/components/pagination?page=6' },
-    { name: 7, href: '/components/pagination?page=7' },
-    { name: 8, href: '/components/pagination?page=8' },
-    { name: 9, href: '/components/pagination?page=9' },
-    { name: 10, href: '/components/pagination?page=10' }
+  let pages2: LinkType[] = [
+    { name: '6', href: '/components/pagination?page=6' },
+    { name: '7', href: '/components/pagination?page=7' },
+    { name: '8', href: '/components/pagination?page=8' },
+    { name: '9', href: '/components/pagination?page=9' },
+    { name: '10', href: '/components/pagination?page=10' }
   ];
 
   $: {
     pages.forEach((page) => {
-      let splitUrl = page.href.split('?');
-      let queryString = splitUrl.slice(1).join('?');
+      let splitUrl = page.href?.split('?');
+      let queryString = splitUrl?.slice(1).join('?');
       const hrefParams = new URLSearchParams(queryString);
       let hrefValue = hrefParams.get('page');
       if (hrefValue === activeUrl) {

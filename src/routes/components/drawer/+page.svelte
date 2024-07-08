@@ -1,4 +1,4 @@
-<script>
+<script lang="ts">
   import { Drawer, Button, CloseButton, Sidebar, SidebarBrand, SidebarCta, SidebarDropdownItem, SidebarDropdownWrapper, SidebarGroup, SidebarItem, SidebarWrapper, Label, Textarea, P, Input, A } from 'flowbite-svelte';
   import { InfoCircleSolid, ArrowRightOutline, ChartPieSolid, CartSolid, GridSolid, MailBoxSolid, UsersSolid, ShoppingBagSolid, ArrowRightToBracketOutline, EditOutline, UserAddOutline, CalendarEditSolid } from 'flowbite-svelte-icons';
   import { sineIn } from 'svelte/easing';
